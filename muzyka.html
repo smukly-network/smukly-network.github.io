@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUZYKA - SMUKLY NETWORK</title>
+    <link rel="icon" href="server-icon.png" type="image/png">
+    <link rel="shortcut icon" href="server-icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .music-header {
+            position: relative;
+            text-align: center;
+            margin: 20px 0 40px 0;
+            height: 280px;
+        }
+
+        .music-title {
+            font-family: 'VT323', monospace;
+            font-size: 6.5rem;
+            font-weight: normal;
+            color: #00ff88; /* zielony neon */
+            letter-spacing: 8px;
+            position: relative;
+            z-index: 2;
+
+            /* neonowy cień bez czarnego obrysu */
+            animation: neon-fade 5s ease-in-out infinite;
+        }
+
+        @keyframes neon-fade {
+            0%, 100% {
+                text-shadow: none;
+            }
+            50% {
+                text-shadow:
+                    0 0 12px #00ff88,
+                    0 0 24px #00ff88,
+                    0 0 36px #00ff88;
+            }
+        }
+
+        .cd-gif {
+            position: absolute;
+            z-index: 1;
+            image-rendering: pixelated;
+        }
+
+        .cd-left {
+            bottom: 0;
+            left: 5%;
+            width: 120px;
+        }
+
+        .cd-top {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+        }
+
+        .cd-right {
+            top: 40%;
+            right: 5%;
+            width: 160px;
+        }
+
+        .music-desc {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 50px;
+        }
+
+        .platform-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .platform-btn {
+    display: block;
+    padding: 8px 60px; /* mniej w pionie (8px góra/dół), więcej w poziomie (60px lewo/prawo) */
+    background: #000;
+    color: #00ff88;
+    border: 3px solid #00ff88;
+    font-family: 'VT323', monospace;
+    font-size: 1.7rem;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 0 10px #00ff88;
+    letter-spacing: 0;
+    transition: all 0.3s ease;
+    width: fit-content;
+    min-width: 280px;
+    /* ostre rogi bez border-radius */
+}
+
+.platform-btn:hover {
+    background: #00ff88;
+    color: #000;
+    box-shadow:
+        0 0 25px #00ff88,
+        0 0 45px #00ff88;
+    transform: translateY(-6px);
+}
+
+.platform-btn:active {
+    transform: translateY(1px);
+    box-shadow:
+        0 0 15px #00ff88,
+        0 0 35px #00ff88;
+}
+
+        .platform-note {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SMUKLY NETWORK</h1>
+        </header>
+        <div class="ticker-wrapper">
+            <div class="ticker">wkrótce nowe wpisy na stronie: smukly network</div>
+        </div>
+        <div class="main">
+            <div class="menu">
+                <a href="index.html">STRONA GŁÓWNA</a>
+                <a href="o-mnie.html">O MNIE</a>
+                <a href="sprzet.html">SPRZĘT</a>
+                <a href="muzyka.html" class="active">MUZYKA</a>
+                <a href="studio-sul.html">STUDIO SUL</a>
+                <a href="sztuka.html">SZTUKA</a>
+                <a href="blog.html">BLOG</a>
+                <a href="kontakt.html">KONTAKT</a>
+                <a href="info.html">INFO 24/7</a>
+            </div>
+            <div class="content">
+                <div class="music-header">
+                    <img src="https://anlucas.neocities.org/Music_CD.gif" class="cd-gif cd-left" alt="CD">
+                    <img src="https://anlucas.neocities.org/42.gif" class="cd-gif cd-top" alt="CD">
+                    <img src="https://anlucas.neocities.org/cd7.gif" class="cd-gif cd-right" alt="CD">
+                    <div class="music-title">MUZYKA</div>
+                </div>
+                <p class="music-desc">słuchaj moich utworów i obczaj nowe projekty</p>
+                <div class="platform-links">
+                    <a href="https://open.spotify.com/artist/6QvGfcrdQPV0Bajo67Vy25?si=GvDXpHfySTWuVuPhz1zk3Q" target="_blank" class="platform-btn">SPOTIFY</a>
+                    <span class="platform-note">(smukly na Spotify)</span>
+                    <a href="https://www.youtube.com/channel/UC28NIMWUi0qdJq14J9PnDPg" target="_blank" class="platform-btn">YOUTUBE</a>
+                    <span class="platform-note">(kanał smukly)</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <img src="https://anlucas.neocities.org/face.gif" alt="Face">
+                <img src="https://anlucas.neocities.org/hash_now.gif" alt="Hash Now">
+                <img src="https://anlucas.neocities.org/prod_625_17265.gif" alt="Free Speach">
+                <img src="https://anlucas.neocities.org/Winamp.gif" alt="Winamp">
+                <img src="https://anlucas.neocities.org/apple_fatal_error.gif" alt="Apple Fatal Error">
+                <img src="https://anlucas.neocities.org/bestview.gif" alt="Open Eyes">
+                <img src="https://anlucas.neocities.org/got_html.gif" alt="Got html">
+                <img src="https://anlucas.neocities.org/ribbon2.gif" alt="Strange World">
+                <img src="https://anlucas.neocities.org/christnow.gif" alt="Christ">
+                <img src="https://anlucas.neocities.org/email-icon.gif" alt="Any Questions">
+                <div style="margin-top: 15px;">
+                    <img src="https://anlucas.neocities.org/worldwideweb_badge.gif" alt="World Wide Web Badge" style="border: none;">
+                </div>
+            </div>
+        </div>
+        <footer>
+            © 2026 SMUKLY NETWORK - NIE BŁĄDŹ W ŚWIECIE
+        </footer>
+    </div>
+</body>
+</html>

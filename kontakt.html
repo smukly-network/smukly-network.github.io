@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONTAKT - SMUKLY NETWORK</title>
+    <link rel="icon" href="server-icon.png" type="image/png">
+<link rel="shortcut icon" href="server-icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+            60% { transform: translate(-1px, 1px); }
+            100% { transform: translate(0); }
+        }
+
+        .main-header {
+            position: relative;
+            text-align: center;
+            margin: 20px 0 40px 0;
+        }
+
+        .header-gif {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 270px;
+            image-rendering: pixelated;
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.8);
+        }
+        .header-gif-left {
+            left: -5px;
+            transform: translateY(-50%) rotate(-10deg);
+        }
+        .header-gif-right {
+            right: -5px;
+            transform: translateY(-50%) rotate(8deg);
+        }
+
+        @media (max-width: 960px) {
+            .header-gif {
+                position: static;
+                display: block;
+                margin: 15px auto;
+                transform: rotate(0deg);
+                max-width: 220px;
+            }
+            /* Na mobile lekko zmniejszamy napis, żeby nie rozwalał układu */
+            .top-line {
+                font-size: 3.2rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SMUKLY NETWORK</h1>
+        </header>
+        <div class="ticker-wrapper">
+            <div class="ticker">napisz zanim matrix się zawiesi... kontakt 24/7</div>
+        </div>
+        <div class="main">
+            <div class="menu">
+                <a href="index.html">STRONA GŁÓWNA</a>
+                <a href="o-mnie.html">O MNIE</a>
+                <a href="sprzet.html">SPRZĘT</a>
+                <a href="muzyka.html">MUZYKA</a>
+                <a href="studio-sul.html">STUDIO SUL</a>
+                <a href="sztuka.html">SZTUKA</a>
+                <a href="blog.html">BLOG</a>
+                <a href="kontakt.html" class="active">KONTAKT</a>
+                <a href="info.html">INFO 24/7</a>
+            </div>
+            <div class="content">
+                <div class="main-header">
+                    <img src="https://anlucas.neocities.org/bluscrn.gif" alt="Bluescreen" class="header-gif header-gif-left">
+                    <!-- POWIĘKSZONY NAPIS KONTAKT -->
+                    <div class="top-line" style="font-size: 4.2rem; letter-spacing: 8px;
+                        text-shadow: 0 0 15px #00ff9d, 0 0 30px #00ff9d, 3px 3px 0 #ff00ff, -3px -3px 0 #ffff00;
+                        animation: glitch 3s infinite alternate; display: inline-block;">
+                        KONTAKT
+                    </div>
+                    <img src="https://anlucas.neocities.org/cellflash.gif" alt="Cell phone" class="header-gif header-gif-right">
+                    <div class="bottom-line"></div>
+                </div>
+
+                <p>chcesz pogadać, razem komponować czy spytać o sprzęt albo rzucić pytaniem? wal śmiało!</p>
+                <p style="margin: 30px 0 10px 0;">dostępny kontakt:</p>
+
+                <p>
+                    <span style="color:#00ff9d; cursor:pointer;"
+                        onclick="navigator.clipboard.writeText('smukly.dred'); showCopy('Discord skopiowany!')">
+                        discord → smukly.dred
+                    </span>
+                </p>
+
+                <p>
+                    <span style="color:#ffff00; cursor:pointer;"
+                        onclick="navigator.clipboard.writeText('smukly.bizness@gmail.com'); showCopy('Mail skopiowany!')">
+                        mail → smukly.bizness@gmail.com
+                    </span>
+                </p>
+
+                <p style="margin-top: 35px; font-size:0.95rem; opacity:0.7; line-height:1.5;">
+                    nie odpisuje w ciągu nastepnych 3dni? albo jestem poza RP, lub coś mnie trzyma<br>
+                    ale spokojnie – mam ręke na pulsie
+                </p>
+
+                <div id="copyMsg"
+                    style="position:fixed; bottom:30px; left:50%; transform:translateX(-50%);
+                        background:#000; color:#00ff41; border:2px solid #00ff41;
+                        padding:8px 18px; font-family:'VT323',monospace; font-size:1.4rem;
+                        border-radius:0; opacity:0; pointer-events:none; transition:opacity 0.5s;
+                        z-index:999;">
+                    skopiowano!
+                </div>
+                <script>
+                function showCopy(text) {
+                    const el = document.getElementById('copyMsg');
+                    el.textContent = text;
+                    el.style.opacity = '1';
+                    setTimeout(() => el.style.opacity = '0', 1600);
+                }
+                </script>
+            </div>
+            <div class="sidebar">
+                <img src="https://anlucas.neocities.org/face.gif" alt="Face">
+                <img src="https://anlucas.neocities.org/hash_now.gif" alt="Hash Now">
+                <img src="https://anlucas.neocities.org/prod_625_17265.gif" alt="Free Speach">
+                <img src="https://anlucas.neocities.org/Winamp.gif" alt="Winamp">
+                <img src="https://anlucas.neocities.org/apple_fatal_error.gif" alt="Apple Fatal Error">
+                <img src="https://anlucas.neocities.org/bestview.gif" alt="Open Eyes">
+                <img src="https://anlucas.neocities.org/got_html.gif" alt="Got html">
+                <img src="https://anlucas.neocities.org/ribbon2.gif" alt="Strange World">
+                <img src="https://anlucas.neocities.org/christnow.gif" alt="Christ">
+                <img src="https://anlucas.neocities.org/email-icon.gif" alt="Any Questions">
+                <div style="margin-top: 15px;">
+                    <img src="https://anlucas.neocities.org/worldwideweb_badge.gif" alt="World Wide Web Badge" style="border: none;">
+                </div>
+            </div>
+        </div>
+        <footer>
+            © 2026 SMUKLY NETWORK - NIE BŁĄDŹ W ŚWIECIE
+        </footer>
+    </div>
+</body>
+</html>
