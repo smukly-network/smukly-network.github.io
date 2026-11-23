@@ -72,28 +72,115 @@ header h1 {
     gap: 20px;
 }
 .menu {
-    width: 200px;
-    padding: 20px 10px;
+    width: 215px;
+    padding: 18px 10px;
     background-color: rgba(17, 0, 68, 0.95);
     border-right: 3px solid #ffff00;
     border-radius: 8px;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
 }
 .menu a {
-    display: block;
-    margin: 15px 0;
-    padding: 12px;
-    background: linear-gradient(to right, #ff9900, #ffcc00);
-    color: black;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 7px 0;
+    padding: 10px 11px;
+    background: linear-gradient(180deg, #ffe64d 0%, #ff9900 100%);
+    color: #14002b;
+    font-weight: 900;
+    font-size: 15px;
     text-decoration: none;
-    border: 2px solid #ffff66;
+    border: 2px solid #fff59d;
     border-radius: 10px;
-    box-shadow: 4px 4px 8px #000;
-    text-align: center;
+    box-shadow: 0 4px 0 #7a3e00, 3px 6px 10px rgba(0, 0, 0, 0.75);
+    text-align: left;
+    overflow: hidden;
+    transition: all 0.22s ease;
 }
-.menu a:hover { background: linear-gradient(to right, #ffcc00, #ffff66); transform: translateY(-3px); }
-.menu a.active { background: linear-gradient(to right, #ffff00, #ffffff); color: #000; box-shadow: 0 0 15px #ffff00; }
+.menu a img,
+.menu a svg {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+    object-fit: contain;
+    image-rendering: pixelated;
+    transition: transform 0.22s ease;
+}
+.menu a span {
+    flex: 1;
+    font-family: "Arial Black", Impact, "Courier New", monospace;
+    font-weight: 900;
+    letter-spacing: 0.6px;
+    line-height: 1.1;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+    transition: transform 0.22s ease, color 0.22s ease;
+}
+.menu a:hover {
+    background: linear-gradient(180deg, #fff9c4 0%, #ffb300 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 0 #7a3e00, 0 0 16px #ffff00;
+}
+.menu a:hover img,
+.menu a:hover svg {
+    transform: translateX(-4px) translateY(-2px) rotate(-10deg) scale(1.12);
+}
+.menu a:hover span {
+    transform: translateX(4px) translateY(2px);
+    color: #4a0080;
+}
+.menu a.active {
+    background: linear-gradient(180deg, #ffffff 0%, #fff176 100%);
+    color: #000;
+    box-shadow: 0 0 18px #ffff00, inset 0 0 8px #ffffff;
+    transform: scale(1.02);
+}
+.menu a:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #7a3e00, 0 0 10px #ffff00;
+}
+
+/* MAŁY PRZYCISK INFO NA SAMYM DOLE LEWEGO PANELU */
+.menu a.menu-info-bottom {
+    margin-top: auto;
+    justify-content: center;
+    gap: 0;
+    padding: 5px 10px;
+    margin-bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+    color: #b794f6;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-align: center;
+    border: 1px dashed rgba(255, 255, 0, 0.45);
+    border-radius: 5px;
+    box-shadow: none;
+    transform: none;
+}
+.menu a.menu-info-bottom:hover {
+    background: rgba(102, 0, 204, 0.35);
+    color: #ffff00;
+    border-color: #ffff00;
+    transform: none;
+    box-shadow: none;
+}
+.menu a.menu-info-bottom.active {
+    background: rgba(255, 255, 0, 0.16);
+    color: #ffff00;
+    border-style: solid;
+    border-color: #ffff00;
+    box-shadow: none;
+    transform: none;
+}
+.menu a.menu-info-bottom:active {
+    transform: none;
+    box-shadow: none;
+}
+
 .content {
     flex: 1;
     padding: 30px 40px;
@@ -303,6 +390,7 @@ footer {
     .container { width: 90%; padding: 10px; }
     .main { flex-direction: column; }
     .menu, .content, .sidebar { width: 100%; padding: 10px; }
+    .menu a.menu-info-bottom { margin-top: 10px; }
     .sidebar-gifs { margin-top: 20px; }
 }
 
@@ -327,25 +415,6 @@ footer {
     letter-spacing: 1px;
 }
 
-/* Ulepszone menu – retro neon vibe */
-.menu a {
-    transition: all 0.3s ease;
-    font-weight: bold;
-    font-size: 18px;
-    letter-spacing: 1px;
-}
-.menu a:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 0 15px #ffff00, 0 6px 12px #000;
-}
-.menu a.active {
-    box-shadow: 0 0 20px #ffff00, inset 0 0 10px #ffffff;
-    transform: scale(1.03);
-}
-.menu a:active {
-    transform: translateY(1px) scale(1.02);
-    box-shadow: 0 0 10px #ffff00, 0 2px 4px #000;
-}
 /* Lightbox - retro styl */
 .lightbox {
     display: none;
