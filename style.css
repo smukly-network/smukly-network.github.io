@@ -116,11 +116,11 @@ header h1 {
     flex-shrink: 0;
 }
 .sidebar img {
-    margin: 6px 2px;
+    margin: 7px 4px;
     border: 2px solid #ffff00;
     border-radius: 4px;
     image-rendering: pixelated;
-    max-width: 84px;
+    max-width: 170px;
     vertical-align: middle;
 }
 
@@ -215,16 +215,12 @@ header h1 {
     75% { transform: skewY(5deg) scaleX(0.97); }
 }
 
-/* GIF-Y BLIŻEJ FLAG I KOMPAKTOWO W DÓŁ */
+/* GIF-Y: UKŁAD JAK TERAZ, NORMALNY ROZMIAR I LEKKI ODSTĘP OD FLAG */
 .sidebar-gifs {
-    margin-top: 22px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    margin-top: 38px;
 }
 .sidebar-gifs > div img {
-    max-width: 140px;
+    max-width: 170px;
 }
 
 /* MOTYW 2 (DARK AERO) I MOTYW 3 (VECTORDELIA) */
