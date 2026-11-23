@@ -116,11 +116,11 @@ header h1 {
     flex-shrink: 0;
 }
 .sidebar img {
-    margin: 4px 3px;
+    margin: 4px 2px;
     border: 2px solid #ffff00;
     border-radius: 4px;
     image-rendering: pixelated;
-    max-width: 170px;
+    max-width: 82px;
     vertical-align: middle;
 }
 
@@ -218,6 +218,9 @@ header h1 {
 /* GIF-Y POD FLAGAMI */
 .sidebar-gifs {
     margin-top: 28px;
+}
+.sidebar-gifs > div img {
+    max-width: 150px;
 }
 
 /* MOTYW 2 (DARK AERO) I MOTYW 3 (VECTORDELIA) */
