@@ -72,8 +72,8 @@ header h1 {
     gap: 20px;
 }
 .menu {
-    width: 222px;
-    padding: 18px 10px;
+    width: 235px;
+    padding: 16px 10px;
     background-color: rgba(17, 0, 68, 0.95);
     border-right: 3px solid #ffff00;
     border-radius: 8px;
@@ -82,116 +82,129 @@ header h1 {
     flex-direction: column;
 }
 
-/* ŻYWE RETRO PRZYCISKI PODSTRON (BEZ PUDEŁEK WOKÓŁ IKONKI I NAPISU) */
+/* WYPukły RETRO KAFELEK Z IKONKĄ PO LEWEJ I GRUBYM FIOLETOWYM NAPISem PO PRAWEJ */
 .menu a:not(.menu-info-bottom) {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 9px;
-    margin: 7px 0;
+    gap: 10px;
+    margin: 6px 0;
     padding: 9px 10px;
-    background: linear-gradient(135deg, #fff35c 0%, #ffb703 52%, #e86f00 100%);
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.06) 46%, rgba(160,72,0,0.28) 52%, rgba(255,230,90,0.18) 100%),
+        linear-gradient(90deg, #ffd400 0%, #ffb700 50%, #f59e0b 100%);
     text-decoration: none;
-    border: 2px solid #ffe866;
-    border-radius: 8px;
-    box-shadow: 0 4px 0 #5a00a6, 3px 6px 10px rgba(0, 0, 0, 0.85);
+    border-top: 3px solid #fffbe6;
+    border-left: 3px solid #ffe66d;
+    border-right: 3px solid #b45309;
+    border-bottom: 3px solid #78350f;
+    border-radius: 7px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.7),
+        0 3px 0 #3b0764,
+        0 6px 10px rgba(0, 0, 0, 0.75);
     overflow: hidden;
     position: relative;
-    transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+    transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .menu a:not(.menu-info-bottom) img,
 .menu a:not(.menu-info-bottom) svg {
-    width: 28px;
-    height: 28px;
+    width: 34px;
+    height: 34px;
     flex-shrink: 0;
     object-fit: contain;
     image-rendering: pixelated;
-    filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.7));
-    transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), filter 0.24s ease;
+    filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.65));
+    transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .menu a:not(.menu-info-bottom) .nav-label {
     flex: 1;
-    color: #d000ff;
+    color: #d91ae8;
     font-family: "Arial Black", Impact, "Courier New", monospace;
     font-weight: 900;
-    font-size: 12.5px;
-    letter-spacing: 0.6px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
     line-height: 1.05;
     text-align: center;
     text-transform: uppercase;
     text-shadow:
-        -1.5px -1.5px 0 #240046,
-         1.5px -1.5px 0 #240046,
-        -1.5px  1.5px 0 #240046,
-         1.5px  1.5px 0 #240046,
-         0px    2px   2px rgba(0, 0, 0, 0.65);
-    transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), color 0.24s ease, letter-spacing 0.24s ease;
+        -2px -2px 0 #2e0057,
+         2px -2px 0 #2e0057,
+        -2px  2px 0 #2e0057,
+         2px  2px 0 #2e0057,
+         0px  3px  2px rgba(0, 0, 0, 0.65);
+    transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), color 0.22s ease;
 }
 
-/* 1. NIEPARZYSTE: IKONKA DO GÓRY, NAPIS W DÓŁ */
+/* NIEPARZYSTE: IKONKA DO GÓRY (I LEKKO W LEWO), NAPIS W DÓŁ (I LEKKO W PRAWO) */
 .menu a:not(.menu-info-bottom):nth-of-type(odd):hover {
-    background: linear-gradient(135deg, #fff99e 0%, #ffc82c 55%, #f07d00 100%);
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.12) 48%, rgba(160,72,0,0.2) 55%, rgba(255,255,150,0.25) 100%),
+        linear-gradient(90deg, #ffe234 0%, #ffc400 50%, #ff9f0a 100%);
     transform: translateY(-2px);
-    box-shadow: 0 5px 0 #7b2cbf, 0 0 15px rgba(255, 255, 0, 0.65);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.85),
+        0 4px 0 #581c87,
+        0 0 14px rgba(255, 255, 0, 0.55);
 }
 .menu a:not(.menu-info-bottom):nth-of-type(odd):hover img,
 .menu a:not(.menu-info-bottom):nth-of-type(odd):hover svg {
-    transform: translate(-3px, -7px) rotate(-12deg) scale(1.1);
+    transform: translate(-3px, -6px) rotate(-10deg) scale(1.08);
 }
 .menu a:not(.menu-info-bottom):nth-of-type(odd):hover .nav-label {
     transform: translate(3px, 6px);
-    color: #ff2ae0;
+    color: #ff2ef5;
 }
 
-/* 2. PARZYSTE: IKONKA W DÓŁ, NAPIS DO GÓRY */
+/* PARZYSTE: IKONKA W DÓŁ (I LEKKO W LEWO), NAPIS DO GÓRY (I LEKKO W PRAWO) */
 .menu a:not(.menu-info-bottom):nth-of-type(even):hover {
-    background: linear-gradient(135deg, #fff99e 0%, #ffc82c 55%, #f07d00 100%);
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.12) 48%, rgba(160,72,0,0.2) 55%, rgba(255,255,150,0.25) 100%),
+        linear-gradient(90deg, #ffe234 0%, #ffc400 50%, #ff9f0a 100%);
     transform: translateY(-2px);
-    box-shadow: 0 5px 0 #7b2cbf, 0 0 15px rgba(255, 255, 0, 0.65);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.85),
+        0 4px 0 #581c87,
+        0 0 14px rgba(255, 255, 0, 0.55);
 }
 .menu a:not(.menu-info-bottom):nth-of-type(even):hover img,
 .menu a:not(.menu-info-bottom):nth-of-type(even):hover svg {
-    transform: translate(-3px, 7px) rotate(12deg) scale(1.1);
+    transform: translate(-3px, 6px) rotate(10deg) scale(1.08);
 }
 .menu a:not(.menu-info-bottom):nth-of-type(even):hover .nav-label {
     transform: translate(3px, -6px);
-    color: #e000b8;
+    color: #e619f0;
 }
 
-/* DODATKOWY RUCH SKOŚNY NA CO 4. POZYCJI DLA RÓŻNORODNOŚCI */
-.menu a:not(.menu-info-bottom):nth-of-type(4n):hover img,
-.menu a:not(.menu-info-bottom):nth-of-type(4n):hover svg {
-    transform: translate(-5px, 6px) rotate(-16deg) scale(1.12);
-}
-.menu a:not(.menu-info-bottom):nth-of-type(4n):hover .nav-label {
-    transform: translate(5px, -6px) skewX(-6deg);
-}
-
+/* AKTYWNY KAFELEK (JASNA RAMKA JAK NA SCREENIE) */
 .menu a:not(.menu-info-bottom).active {
-    background: linear-gradient(135deg, #ffffff 0%, #ffe600 55%, #ff9900 100%);
-    border-color: #ffffff;
-    box-shadow: 0 0 16px #ffff00, 0 4px 0 #7b2cbf;
-    transform: scale(1.02);
-}
-.menu a:not(.menu-info-bottom).active .nav-label {
-    color: #9d00ff;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.18) 50%, rgba(255,180,0,0.25) 100%),
+        linear-gradient(90deg, #fff147 0%, #ffca00 55%, #ff9e00 100%);
+    border-top-color: #ffffff;
+    border-left-color: #ffffff;
+    border-right-color: #fff3a1;
+    border-bottom-color: #d97706;
+    box-shadow:
+        0 0 14px rgba(255, 255, 255, 0.75),
+        0 3px 0 #581c87;
 }
 .menu a:not(.menu-info-bottom):active {
     transform: translateY(2px);
-    box-shadow: 0 2px 0 #5a00a6, 0 0 10px #ffff00;
+    box-shadow: 0 1px 0 #3b0764, 0 0 10px #ffff00;
 }
 
-/* MAŁY, SKROMNY PRZYCISK INFO NA SAMYM DOLE LEWEGO PANELU */
+/* MAŁY, DYSKRETNY PRZYCISK INFO NA SAMYM DOLE LEWEGO PANELU */
 .menu a.menu-info-bottom {
     margin-top: auto;
     margin-bottom: 0;
-    padding: 4px 10px;
+    padding: 4px 12px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     align-self: center;
-    min-width: 64px;
-    background: rgba(10, 0, 32, 0.78);
+    min-width: 68px;
+    background: rgba(10, 0, 32, 0.75);
     color: #c77dff;
     font-family: "Courier New", Courier, monospace;
     font-weight: bold;
@@ -199,16 +212,16 @@ header h1 {
     letter-spacing: 2px;
     text-decoration: none;
     text-align: center;
-    border: 1px solid rgba(199, 125, 255, 0.42);
+    border: 1px solid rgba(199, 125, 255, 0.35);
     border-radius: 4px;
     box-shadow: none;
     transform: none;
     transition: all 0.18s ease;
 }
 .menu a.menu-info-bottom:hover {
-    background: rgba(88, 16, 178, 0.45);
+    background: rgba(88, 28, 135, 0.45);
     color: #ffff00;
-    border-color: rgba(255, 255, 0, 0.7);
+    border-color: rgba(255, 255, 0, 0.65);
     transform: none;
     box-shadow: none;
 }
@@ -232,39 +245,46 @@ button.blog-back-btn,
     align-items: center;
     gap: 6px;
     margin-top: 22px;
-    padding: 7px 14px;
-    background: linear-gradient(135deg, #fff35c 0%, #ffb703 55%, #e86f00 100%);
-    color: #d000ff;
+    padding: 7px 15px;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.08) 50%, rgba(160,72,0,0.25) 100%),
+        linear-gradient(90deg, #ffd400 0%, #ffb700 55%, #f59e0b 100%);
+    color: #d91ae8;
     font-family: "Arial Black", Impact, "Courier New", monospace;
     font-weight: 900;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 0.6px;
     text-transform: uppercase;
     text-decoration: none;
-    border: 2px solid #ffe866;
-    border-radius: 7px;
-    box-shadow: 0 3px 0 #5a00a6, 2px 4px 8px rgba(0, 0, 0, 0.85);
+    border-top: 2px solid #fffbe6;
+    border-left: 2px solid #ffe66d;
+    border-right: 2px solid #b45309;
+    border-bottom: 3px solid #78350f;
+    border-radius: 6px;
+    box-shadow: 0 3px 0 #3b0764, 0 4px 8px rgba(0, 0, 0, 0.75);
     text-shadow:
-        -1.5px -1.5px 0 #240046,
-         1.5px -1.5px 0 #240046,
-        -1.5px  1.5px 0 #240046,
-         1.5px  1.5px 0 #240046;
+        -2px -2px 0 #2e0057,
+         2px -2px 0 #2e0057,
+        -2px  2px 0 #2e0057,
+         2px  2px 0 #2e0057;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 a.blog-back-btn:hover,
 button.blog-back-btn:hover,
 .back-btn:hover {
-    background: linear-gradient(135deg, #fff99e 0%, #ffc82c 55%, #f07d00 100%);
-    color: #ff2ae0;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.12) 50%, rgba(160,72,0,0.2) 100%),
+        linear-gradient(90deg, #ffe234 0%, #ffc400 55%, #ff9f0a 100%);
+    color: #ff2ef5;
     transform: translateY(-2px);
-    box-shadow: 0 4px 0 #7b2cbf, 0 0 12px rgba(255, 255, 0, 0.6);
+    box-shadow: 0 4px 0 #581c87, 0 0 12px rgba(255, 255, 0, 0.55);
 }
 a.blog-back-btn:active,
 button.blog-back-btn:active,
 .back-btn:active {
     transform: translateY(1px);
-    box-shadow: 0 2px 0 #5a00a6;
+    box-shadow: 0 1px 0 #3b0764;
 }
 
 .content {
