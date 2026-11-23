@@ -44,7 +44,6 @@
             <div class="sidebar">
                 <div class="sidebar-top">
                     <div class="theme-people">
-                        <!-- 1. Błyszczący niebieski/turkusowy -->
                         <button type="button" class="theme-person-btn active" onclick="setTheme('default')" title="Motyw 1">
                             <svg class="doll-svg" viewBox="0 0 64 72">
                                 <defs>
@@ -61,7 +60,6 @@
                             </svg>
                         </button>
 
-                        <!-- 2. Czarny -->
                         <button type="button" class="theme-person-btn" onclick="setTheme('black')" title="Motyw 2">
                             <svg class="doll-svg" viewBox="0 0 64 72">
                                 <defs>
@@ -78,7 +76,6 @@
                             </svg>
                         </button>
 
-                        <!-- 3. Biały z kolorowymi paskami -->
                         <button type="button" class="theme-person-btn" onclick="setTheme('striped')" title="Motyw 3">
                             <svg class="doll-svg" viewBox="0 0 64 72">
                                 <defs>
@@ -98,19 +95,16 @@
                     </div>
 
                     <div class="lang-switch">
-                        <!-- Flaga PL w kratkę -->
-                        <button type="button" id="btnPl" class="active" onclick="setLang('pl')">
+                        <button type="button" id="btnPl" class="active" onclick="setLang('pl')" aria-label="Polski">
                             <svg class="flag-grid-svg" viewBox="0 0 22 14">
                                 <rect x="0" y="0" width="22" height="7" fill="#ffffff"/>
                                 <rect x="0" y="7" width="22" height="7" fill="#ff0000"/>
                                 <path d="M5.5 0 V14 M11 0 V14 M16.5 0 V14 M0 4.66 H22 M0 9.33 H22" stroke="#111111" stroke-width="0.7"/>
                                 <rect x="0" y="0" width="22" height="14" fill="none" stroke="#111111" stroke-width="1"/>
                             </svg>
-                            PL
                         </button>
 
-                        <!-- Flaga EN / UK w kratkę -->
-                        <button type="button" id="btnEn" onclick="setLang('en')">
+                        <button type="button" id="btnEn" onclick="setLang('en')" aria-label="English">
                             <svg class="flag-grid-svg" viewBox="0 0 22 14">
                                 <rect x="0" y="0" width="22" height="14" fill="#ffffff"/>
                                 <rect x="0" y="0" width="4" height="4" fill="#012169"/>
@@ -123,7 +117,6 @@
                                 <path d="M5.5 0 V14 M11 0 V14 M16.5 0 V14 M0 4.66 H22 M0 9.33 H22" stroke="#111111" stroke-width="0.65"/>
                                 <rect x="0" y="0" width="22" height="14" fill="none" stroke="#111111" stroke-width="1"/>
                             </svg>
-                            EN
                         </button>
                     </div>
                 </div>
