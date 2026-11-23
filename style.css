@@ -141,8 +141,8 @@ header h1 {
     gap: 8px;
 }
 .theme-person-btn {
-    width: 44px;
-    height: 50px;
+    width: 48px;
+    height: 54px;
     background: rgba(0, 0, 0, 0.55);
     border: 2px solid #ffff00;
     border-radius: 8px;
@@ -161,40 +161,10 @@ header h1 {
     box-shadow: 0 0 15px #ffff00;
     background: rgba(255, 255, 255, 0.15);
 }
-.aero-doll {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-}
-.aero-doll-head {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-.aero-doll-body {
-    width: 22px;
-    height: 14px;
-    border-radius: 10px 10px 5px 5px;
-}
-/* 1. Domyślny zielonkowo-niebieski */
-.doll-default .aero-doll-head,
-.doll-default .aero-doll-body {
-    background: linear-gradient(135deg, #00ff9d, #00bfff);
-    box-shadow: 0 0 6px #00ffff;
-}
-/* 2. Czarny */
-.doll-black .aero-doll-head,
-.doll-black .aero-doll-body {
-    background: linear-gradient(180deg, #333333, #0a0a0a);
-    border: 1px solid #888888;
-}
-/* 3. Kolorowo-paskowy */
-.doll-striped .aero-doll-head {
-    background: repeating-linear-gradient(45deg, #ff0055, #ff0055 3px, #ffcc00 3px, #ffcc00 6px, #00ffff 6px, #00ffff 9px);
-}
-.doll-striped .aero-doll-body {
-    background: repeating-linear-gradient(90deg, #ff5500, #ff5500 4px, #00ff88 4px, #00ff88 8px, #aa00ff 8px, #aa00ff 12px);
+.doll-svg {
+    width: 36px;
+    height: 40px;
+    display: block;
 }
 
 /* PRZYCISKI PL / EN POD LUDZIKAMI */
@@ -218,7 +188,7 @@ header h1 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 5px;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .lang-switch button:hover {
@@ -229,26 +199,49 @@ header h1 {
     background: #ffff00;
     color: #000000;
 }
-.flag-mini {
-    width: 16px;
-    height: 11px;
-    border: 1px solid #fff;
-    display: inline-block;
+.flag-grid-svg {
+    width: 22px;
+    height: 14px;
+    display: block;
     flex-shrink: 0;
-}
-.flag-pl {
-    background: linear-gradient(to bottom, #ffffff 50%, #dc143c 50%);
-}
-.flag-en {
-    background: linear-gradient(to bottom, #012169 33%, #ffffff 33%, #ffffff 66%, #c8102e 66%);
 }
 
 /* GIF-Y PRZESUNIĘTE NIŻEJ */
 .sidebar-gifs {
-    margin-top: 85px;
+    margin-top: 130px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* MOTYW 2 (CZARNY) I MOTYW 3 (BIAŁY Z KOLOROWYMI PASKAMI) */
+body.theme-black .container {
+    background-color: rgba(10, 10, 10, 0.96);
+    border-color: #888888;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.18);
+}
+body.theme-black .menu,
+body.theme-black .sidebar {
+    background-color: rgba(16, 16, 16, 0.96);
+    border-color: #888888;
+}
+
+body.theme-striped .container {
+    background-color: rgba(245, 248, 255, 0.95);
+    color: #111111;
+    border-color: #ff0066;
+    box-shadow: 0 0 35px rgba(0, 229, 255, 0.55);
+}
+body.theme-striped .content {
+    color: #111111;
+}
+body.theme-striped .menu,
+body.theme-striped .sidebar {
+    background-color: rgba(255, 255, 255, 0.92);
+    border-color: #00aaff;
+}
+body.theme-striped header {
+    background: repeating-linear-gradient(90deg, #ff0055 0 24px, #ffcc00 24px 48px, #00d0ff 48px 72px, #aa00ff 72px 96px);
 }
 
 footer {
