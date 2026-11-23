@@ -116,11 +116,12 @@ header h1 {
     flex-shrink: 0;
 }
 .sidebar img {
-    margin: 12px 0;
+    margin: 6px 2px;
     border: 2px solid #ffff00;
     border-radius: 4px;
     image-rendering: pixelated;
-    max-width: 170px;
+    max-width: 84px;
+    vertical-align: middle;
 }
 
 /* GÓRA PRAWEGO PANELU: 3 LUDZIKI + FLAGI PL / EN */
@@ -214,9 +215,16 @@ header h1 {
     75% { transform: skewY(5deg) scaleX(0.97); }
 }
 
-/* GIF-Y PRZESUNIĘTE NIŻEJ PRZY ZACHOWANIU ZWYKŁEGO UKŁADU */
+/* GIF-Y BLIŻEJ FLAG I KOMPAKTOWO W DÓŁ */
 .sidebar-gifs {
-    margin-top: 90px;
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar-gifs > div img {
+    max-width: 140px;
 }
 
 /* MOTYW 2 (DARK AERO) I MOTYW 3 (VECTORDELIA) */
