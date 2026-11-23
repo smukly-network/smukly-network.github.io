@@ -141,23 +141,24 @@ header h1 {
 .theme-person-btn {
     flex: 1;
     height: 44px;
-    background: rgba(0, 0, 0, 0.55);
-    border: 2px solid #ffff00;
-    border-radius: 8px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2px 4px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 2px 3px;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 .theme-person-btn:hover {
     transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 0 12px #00ffff;
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.05);
 }
 .theme-person-btn.active {
-    box-shadow: 0 0 15px #ffff00;
-    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 0, 0.45);
+    background: rgba(255, 255, 255, 0.08);
 }
 .doll-svg {
     width: 100%;
@@ -166,7 +167,7 @@ header h1 {
     display: block;
 }
 
-/* FLAGI PL / EN POD LUDZIKAMI (MNIEJSZE, BEZ NAPISÓW, POWIEWANIE) */
+/* FLAGI PL / EN POD LUDZIKAMI (HD, MINIMALNA OTOCZKA, POWIEWANIE) */
 .lang-switch {
     display: flex;
     justify-content: center;
@@ -174,36 +175,36 @@ header h1 {
     width: 100%;
 }
 .lang-switch button {
-    padding: 4px 8px;
-    font-family: "Courier New", Courier, monospace;
-    font-weight: bold;
-    color: #ffff00;
-    background: rgba(0, 0, 0, 0.7);
-    border: 2px solid #ffff00;
-    border-radius: 6px;
+    padding: 3px 5px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
 }
 .lang-switch button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 10px #ffff00;
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.05);
 }
 .lang-switch button.active {
-    background: #ffff00;
-    color: #000000;
+    border-color: rgba(255, 255, 0, 0.45);
+    background: rgba(255, 255, 255, 0.08);
 }
-.flag-grid-svg {
-    width: 20px;
-    height: 12px;
+.flag-hd-svg {
+    width: 24px;
+    height: 15px;
     display: block;
     flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 2px;
     animation: flag-wave 1.8s ease-in-out infinite;
     transform-origin: left center;
 }
-.lang-switch button:nth-child(2) .flag-grid-svg {
+.lang-switch button:nth-child(2) .flag-hd-svg {
     animation-delay: 0.35s;
 }
 @keyframes flag-wave {
@@ -218,7 +219,7 @@ header h1 {
     margin-top: 90px;
 }
 
-/* MOTYW 2 (CZARNY) I MOTYW 3 (BIAŁY Z KOLOROWYMI PASKAMI) */
+/* MOTYW 2 (DARK AERO) I MOTYW 3 (VECTORDELIA) */
 body.theme-black .container {
     background-color: rgba(10, 10, 10, 0.96);
     border-color: #888888;
@@ -231,21 +232,21 @@ body.theme-black .sidebar {
 }
 
 body.theme-striped .container {
-    background-color: rgba(245, 248, 255, 0.95);
-    color: #111111;
-    border-color: #ff0066;
-    box-shadow: 0 0 35px rgba(0, 229, 255, 0.55);
+    background: linear-gradient(135deg, rgba(163, 230, 53, 0.94), rgba(101, 163, 13, 0.95));
+    color: #102404;
+    border-color: #ec4899;
+    box-shadow: 0 0 35px rgba(163, 230, 53, 0.65);
 }
 body.theme-striped .content {
-    color: #111111;
+    color: #102404;
 }
 body.theme-striped .menu,
 body.theme-striped .sidebar {
-    background-color: rgba(255, 255, 255, 0.92);
-    border-color: #00aaff;
+    background-color: rgba(236, 252, 203, 0.9);
+    border-color: #06b6d4;
 }
 body.theme-striped header {
-    background: repeating-linear-gradient(90deg, #ff0055 0 24px, #ffcc00 24px 48px, #00d0ff 48px 72px, #aa00ff 72px 96px);
+    background: linear-gradient(90deg, #84cc16, #22c55e, #06b6d4, #ec4899);
 }
 
 footer {
