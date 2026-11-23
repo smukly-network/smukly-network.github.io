@@ -114,8 +114,6 @@ header h1 {
     text-align: center;
     border-radius: 8px;
     flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
 }
 .sidebar img {
     margin: 12px 0;
@@ -125,24 +123,24 @@ header h1 {
     max-width: 170px;
 }
 
-/* GÓRA PRAWEGO PANELU: 3 LUDZIKI + PL / EN */
+/* GÓRA PRAWEGO PANELU: 3 LUDZIKI + FLAGI PL / EN */
 .sidebar-top {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding-bottom: 12px;
-    border-bottom: 2px dashed #ffff00;
+    width: 100%;
 }
 .theme-people {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
+    width: 100%;
 }
 .theme-person-btn {
-    width: 48px;
-    height: 54px;
+    flex: 1;
+    height: 44px;
     background: rgba(0, 0, 0, 0.55);
     border: 2px solid #ffff00;
     border-radius: 8px;
@@ -150,11 +148,11 @@ header h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2px;
+    padding: 2px 4px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .theme-person-btn:hover {
-    transform: translateY(-3px) scale(1.06);
+    transform: translateY(-2px) scale(1.04);
     box-shadow: 0 0 12px #00ffff;
 }
 .theme-person-btn.active {
@@ -162,24 +160,23 @@ header h1 {
     background: rgba(255, 255, 255, 0.15);
 }
 .doll-svg {
-    width: 36px;
-    height: 40px;
+    width: 100%;
+    height: 34px;
+    transform: scaleX(1.18) scaleY(0.88);
     display: block;
 }
 
-/* PRZYCISKI PL / EN POD LUDZIKAMI */
+/* FLAGI PL / EN POD LUDZIKAMI (MNIEJSZE, BEZ NAPISÓW, POWIEWANIE) */
 .lang-switch {
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 12px;
     width: 100%;
 }
 .lang-switch button {
-    flex: 1;
-    padding: 5px 6px;
+    padding: 4px 8px;
     font-family: "Courier New", Courier, monospace;
     font-weight: bold;
-    font-size: 13px;
     color: #ffff00;
     background: rgba(0, 0, 0, 0.7);
     border: 2px solid #ffff00;
@@ -188,7 +185,6 @@ header h1 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .lang-switch button:hover {
@@ -200,18 +196,26 @@ header h1 {
     color: #000000;
 }
 .flag-grid-svg {
-    width: 22px;
-    height: 14px;
+    width: 20px;
+    height: 12px;
     display: block;
     flex-shrink: 0;
+    animation: flag-wave 1.8s ease-in-out infinite;
+    transform-origin: left center;
+}
+.lang-switch button:nth-child(2) .flag-grid-svg {
+    animation-delay: 0.35s;
+}
+@keyframes flag-wave {
+    0%, 100% { transform: skewY(0deg) scaleX(1); }
+    25% { transform: skewY(-5deg) scaleX(0.97); }
+    50% { transform: skewY(0deg) scaleX(1); }
+    75% { transform: skewY(5deg) scaleX(0.97); }
 }
 
-/* GIF-Y PRZESUNIĘTE NIŻEJ */
+/* GIF-Y PRZESUNIĘTE NIŻEJ PRZY ZACHOWANIU ZWYKŁEGO UKŁADU */
 .sidebar-gifs {
-    margin-top: 130px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 90px;
 }
 
 /* MOTYW 2 (CZARNY) I MOTYW 3 (BIAŁY Z KOLOROWYMI PASKAMI) */
