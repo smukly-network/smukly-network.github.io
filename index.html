@@ -44,7 +44,7 @@
             <div class="sidebar">
                 <div class="sidebar-top">
                     <div class="theme-people">
-                        <button type="button" class="theme-person-btn active" onclick="setTheme('default')" title="Motyw 1">
+                        <button type="button" class="theme-person-btn active" onclick="setTheme('default')" title="Frutiger Aero" aria-label="Frutiger Aero">
                             <svg class="doll-svg" viewBox="0 0 64 72">
                                 <defs>
                                     <linearGradient id="aeroBlue" x1="0" y1="0" x2="0" y2="1">
@@ -60,7 +60,7 @@
                             </svg>
                         </button>
 
-                        <button type="button" class="theme-person-btn" onclick="setTheme('black')" title="Motyw 2">
+                        <button type="button" class="theme-person-btn" onclick="setTheme('black')" title="Dark Aero" aria-label="Dark Aero">
                             <svg class="doll-svg" viewBox="0 0 64 72">
                                 <defs>
                                     <linearGradient id="aeroBlack" x1="0" y1="0" x2="0" y2="1">
@@ -76,46 +76,42 @@
                             </svg>
                         </button>
 
-                        <button type="button" class="theme-person-btn" onclick="setTheme('striped')" title="Motyw 3">
+                        <button type="button" class="theme-person-btn" onclick="setTheme('striped')" title="Vectordelia" aria-label="Vectordelia">
                             <svg class="doll-svg" viewBox="0 0 64 72">
                                 <defs>
-                                    <pattern id="colorStripes" width="12" height="12" patternUnits="userSpaceOnUse">
-                                        <rect x="0" y="0" width="12" height="4" fill="#ff2a6d"/>
-                                        <rect x="0" y="4" width="12" height="4" fill="#ffd166"/>
-                                        <rect x="0" y="8" width="12" height="4" fill="#05d9e8"/>
-                                    </pattern>
+                                    <linearGradient id="vectordeliaGreen" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="#bef264"/>
+                                        <stop offset="60%" stop-color="#84cc16"/>
+                                        <stop offset="100%" stop-color="#4d7c0f"/>
+                                    </linearGradient>
                                 </defs>
-                                <circle cx="32" cy="18" r="13" fill="#ffffff" stroke="#222222" stroke-width="2.2"/>
-                                <circle cx="32" cy="18" r="11" fill="url(#colorStripes)" opacity="0.75"/>
-                                <ellipse cx="32" cy="12" rx="6.5" ry="3.5" fill="rgba(255,255,255,0.7)"/>
-                                <path d="M10 60 C10 40, 20 34, 32 34 C44 34, 54 40, 54 60 C54 65, 10 65, 10 60 Z" fill="#ffffff" stroke="#222222" stroke-width="2.2"/>
-                                <path d="M10 60 C10 40, 20 34, 32 34 C44 34, 54 40, 54 60 C54 65, 10 65, 10 60 Z" fill="url(#colorStripes)" opacity="0.75"/>
+                                <circle cx="32" cy="18" r="13" fill="url(#vectordeliaGreen)" stroke="#365314" stroke-width="2"/>
+                                <path d="M23 15 C27 10, 36 11, 39 16 C41 19, 36 23, 32 21" fill="none" stroke="#ec4899" stroke-width="2.2" stroke-linecap="round"/>
+                                <path d="M26 24 C30 27, 37 25, 39 21" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M10 60 C10 40, 20 34, 32 34 C44 34, 54 40, 54 60 C54 65, 10 65, 10 60 Z" fill="url(#vectordeliaGreen)" stroke="#365314" stroke-width="2"/>
+                                <path d="M15 52 C22 42, 30 56, 38 43 C42 37, 47 45, 50 51" fill="none" stroke="#ec4899" stroke-width="2.3" stroke-linecap="round"/>
+                                <path d="M18 57 C26 51, 34 61, 45 53" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="22" cy="46" r="2.2" fill="#06b6d4"/>
+                                <circle cx="43" cy="48" r="2.2" fill="#a855f7"/>
                             </svg>
                         </button>
                     </div>
 
                     <div class="lang-switch">
-                        <button type="button" id="btnPl" class="active" onclick="setLang('pl')" aria-label="Polski">
-                            <svg class="flag-grid-svg" viewBox="0 0 22 14">
-                                <rect x="0" y="0" width="22" height="7" fill="#ffffff"/>
-                                <rect x="0" y="7" width="22" height="7" fill="#ff0000"/>
-                                <path d="M5.5 0 V14 M11 0 V14 M16.5 0 V14 M0 4.66 H22 M0 9.33 H22" stroke="#111111" stroke-width="0.7"/>
-                                <rect x="0" y="0" width="22" height="14" fill="none" stroke="#111111" stroke-width="1"/>
+                        <button type="button" id="btnPl" class="active" onclick="setLang('pl')" title="zmień na polski" aria-label="zmień na polski">
+                            <svg class="flag-hd-svg" viewBox="0 0 24 15">
+                                <rect x="0" y="0" width="24" height="7.5" fill="#ffffff"/>
+                                <rect x="0" y="7.5" width="24" height="7.5" fill="#dc143c"/>
                             </svg>
                         </button>
 
-                        <button type="button" id="btnEn" onclick="setLang('en')" aria-label="English">
-                            <svg class="flag-grid-svg" viewBox="0 0 22 14">
-                                <rect x="0" y="0" width="22" height="14" fill="#ffffff"/>
-                                <rect x="0" y="0" width="4" height="4" fill="#012169"/>
-                                <rect x="18" y="0" width="4" height="4" fill="#012169"/>
-                                <rect x="0" y="10" width="4" height="4" fill="#012169"/>
-                                <rect x="18" y="10" width="4" height="4" fill="#012169"/>
-                                <rect x="9.5" y="0" width="3" height="14" fill="#c8102e"/>
-                                <rect x="0" y="5.5" width="22" height="3" fill="#c8102e"/>
-                                <path d="M4 2 L8.5 5.5 M18 2 L13.5 5.5 M4 12 L8.5 8.5 M18 12 L13.5 8.5" stroke="#c8102e" stroke-width="1.6"/>
-                                <path d="M5.5 0 V14 M11 0 V14 M16.5 0 V14 M0 4.66 H22 M0 9.33 H22" stroke="#111111" stroke-width="0.65"/>
-                                <rect x="0" y="0" width="22" height="14" fill="none" stroke="#111111" stroke-width="1"/>
+                        <button type="button" id="btnEn" onclick="setLang('en')" title="change to English" aria-label="change to English">
+                            <svg class="flag-hd-svg" viewBox="0 0 24 15">
+                                <rect x="0" y="0" width="24" height="15" fill="#012169"/>
+                                <path d="M0 0 L24 15 M24 0 L0 15" stroke="#ffffff" stroke-width="3.2"/>
+                                <path d="M0 0 L24 15 M24 0 L0 15" stroke="#c8102e" stroke-width="1.6"/>
+                                <path d="M12 0 V15 M0 7.5 H24" stroke="#ffffff" stroke-width="5"/>
+                                <path d="M12 0 V15 M0 7.5 H24" stroke="#c8102e" stroke-width="2.8"/>
                             </svg>
                         </button>
                     </div>
