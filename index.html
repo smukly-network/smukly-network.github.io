@@ -15,57 +15,116 @@
             <h1>SMUKLY NETWORK</h1>
         </header>
         <div class="ticker-wrapper">
-            <div class="ticker">wkrótce nowe wpisy na stronie: smukly network</div>
+            <div class="ticker" data-i18n="ticker">wkrótce nowe wpisy na stronie: smukly network</div>
         </div>
         <div class="main">
             <div class="menu">
-                <a href="index.html" class="active">STRONA GŁÓWNA</a>
-                <a href="o-mnie.html">O MNIE</a>
-                <a href="sprzet.html">SPRZĘT</a>
-                <a href="muzyka.html">MUZYKA</a>
-                <a href="studio-sul.html">STUDIO SUL</a>
-                <a href="sztuka.html">SZTUKA</a>
-                <a href="blog.html">BLOG</a>
-                <a href="kontakt.html">KONTAKT</a>
-                <a href="info.html">INFO 24/7</a>
+                <a href="index.html" class="active" data-i18n="nav_home">STRONA GŁÓWNA</a>
+                <a href="o-mnie.html" data-i18n="nav_about">O MNIE</a>
+                <a href="sprzet.html" data-i18n="nav_gear">SPRZĘT</a>
+                <a href="muzyka.html" data-i18n="nav_music">MUZYKA</a>
+                <a href="studio-sul.html" data-i18n="nav_studio">STUDIO SUL</a>
+                <a href="sztuka.html" data-i18n="nav_art">SZTUKA</a>
+                <a href="blog.html" data-i18n="nav_blog">BLOG</a>
+                <a href="kontakt.html" data-i18n="nav_contact">KONTAKT</a>
+                <a href="info.html" data-i18n="nav_info">INFO 24/7</a>
             </div>
             <div class="content">
                 <div class="main-header">
-                    <div class="top-line">smukly network</div>
+                    <div class="top-line" data-i18n="top_line">smukly network</div>
                     <div class="dash">-</div>
-                    <div class="bottom-line">sieć bez granic</div>
+                    <div class="bottom-line" data-i18n="bottom_line">sieć bez granic</div>
                 </div>
-                <p>yooo tu smukly</p>
-                <p>Ta oto strona to moja baza — strefa w, której można znaleźć informacje jak i również moją twórczość:</p>
-                <p>Projekty muzyczne — albumy, utwory czy przyszłe projekty<br>Gry i sprzęt — w co pogrywam i na czym, oraz moje sprzęty</p>
-                <p>Strona Studio SUL ukońcozna, obczaj info o Studiu i projektach (samo studio jeszcze w przebudowie).</p>
-                <p>Pozdro i dziena za odwiedziny!</p>
+                <p data-i18n="p1">yooo tu smukly</p>
+                <p data-i18n="p2">Ta oto strona to moja baza — strefa w, której można znaleźć informacje jak i również moją twórczość:</p>
+                <p data-i18n="p3">Projekty muzyczne — albumy, utwory czy przyszłe projekty<br>Gry i sprzęt — w co pogrywam i na czym, oraz moje sprzęty</p>
+                <p data-i18n="p4">Strona Studio SUL ukońcozna, obczaj info o Studiu i projektach (samo studio jeszcze w przebudowie).</p>
+                <p data-i18n="p5">Pozdro i dziena za odwiedziny!</p>
             </div>
             <div class="sidebar">
                 <div class="sidebar-top">
                     <div class="theme-people">
-                        <button type="button" class="theme-person-btn doll-default active" title="Motyw 1">
-                            <span class="aero-doll">
-                                <span class="aero-doll-head"></span>
-                                <span class="aero-doll-body"></span>
-                            </span>
+                        <!-- 1. Błyszczący niebieski/turkusowy -->
+                        <button type="button" class="theme-person-btn active" onclick="setTheme('default')" title="Motyw 1">
+                            <svg class="doll-svg" viewBox="0 0 64 72">
+                                <defs>
+                                    <linearGradient id="aeroBlue" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#8cf0ff"/>
+                                        <stop offset="55%" stop-color="#00b4d8"/>
+                                        <stop offset="100%" stop-color="#005f73"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="32" cy="18" r="13" fill="url(#aeroBlue)" stroke="#004e64" stroke-width="2.5"/>
+                                <ellipse cx="32" cy="12" rx="7" ry="4" fill="rgba(255,255,255,0.65)"/>
+                                <path d="M10 60 C10 40, 20 34, 32 34 C44 34, 54 40, 54 60 C54 65, 10 65, 10 60 Z" fill="url(#aeroBlue)" stroke="#004e64" stroke-width="2.5"/>
+                                <path d="M18 44 C23 39, 41 39, 46 44" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
                         </button>
-                        <button type="button" class="theme-person-btn doll-black" title="Motyw 2">
-                            <span class="aero-doll">
-                                <span class="aero-doll-head"></span>
-                                <span class="aero-doll-body"></span>
-                            </span>
+
+                        <!-- 2. Czarny -->
+                        <button type="button" class="theme-person-btn" onclick="setTheme('black')" title="Motyw 2">
+                            <svg class="doll-svg" viewBox="0 0 64 72">
+                                <defs>
+                                    <linearGradient id="aeroBlack" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#555555"/>
+                                        <stop offset="55%" stop-color="#1c1c1c"/>
+                                        <stop offset="100%" stop-color="#050505"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="32" cy="18" r="13" fill="url(#aeroBlack)" stroke="#777777" stroke-width="2"/>
+                                <ellipse cx="32" cy="12" rx="7" ry="4" fill="rgba(255,255,255,0.35)"/>
+                                <path d="M10 60 C10 40, 20 34, 32 34 C44 34, 54 40, 54 60 C54 65, 10 65, 10 60 Z" fill="url(#aeroBlack)" stroke="#777777" stroke-width="2"/>
+                                <path d="M18 44 C23 39, 41 39, 46 44" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
                         </button>
-                        <button type="button" class="theme-person-btn doll-striped" title="Motyw 3">
-                            <span class="aero-doll">
-                                <span class="aero-doll-head"></span>
-                                <span class="aero-doll-body"></span>
-                            </span>
+
+                        <!-- 3. Biały z kolorowymi paskami -->
+                        <button type="button" class="theme-person-btn" onclick="setTheme('striped')" title="Motyw 3">
+                            <svg class="doll-svg" viewBox="0 0 64 72">
+                                <defs>
+                                    <pattern id="colorStripes" width="12" height="12" patternUnits="userSpaceOnUse">
+                                        <rect x="0" y="0" width="12" height="4" fill="#ff2a6d"/>
+                                        <rect x="0" y="4" width="12" height="4" fill="#ffd166"/>
+                                        <rect x="0" y="8" width="12" height="4" fill="#05d9e8"/>
+                                    </pattern>
+                                </defs>
+                                <circle cx="32" cy="18" r="13" fill="#ffffff" stroke="#222222" stroke-width="2.2"/>
+                                <circle cx="32" cy="18" r="11" fill="url(#colorStripes)" opacity="0.75"/>
+                                <ellipse cx="32" cy="12" rx="6.5" ry="3.5" fill="rgba(255,255,255,0.7)"/>
+                                <path d="M10 60 C10 40, 20 34, 32 34 C44 34, 54 40, 54 60 C54 65, 10 65, 10 60 Z" fill="#ffffff" stroke="#222222" stroke-width="2.2"/>
+                                <path d="M10 60 C10 40, 20 34, 32 34 C44 34, 54 40, 54 60 C54 65, 10 65, 10 60 Z" fill="url(#colorStripes)" opacity="0.75"/>
+                            </svg>
                         </button>
                     </div>
+
                     <div class="lang-switch">
-                        <button type="button" class="active"><span class="flag-mini flag-pl"></span>PL</button>
-                        <button type="button"><span class="flag-mini flag-en"></span>EN</button>
+                        <!-- Flaga PL w kratkę -->
+                        <button type="button" id="btnPl" class="active" onclick="setLang('pl')">
+                            <svg class="flag-grid-svg" viewBox="0 0 22 14">
+                                <rect x="0" y="0" width="22" height="7" fill="#ffffff"/>
+                                <rect x="0" y="7" width="22" height="7" fill="#ff0000"/>
+                                <path d="M5.5 0 V14 M11 0 V14 M16.5 0 V14 M0 4.66 H22 M0 9.33 H22" stroke="#111111" stroke-width="0.7"/>
+                                <rect x="0" y="0" width="22" height="14" fill="none" stroke="#111111" stroke-width="1"/>
+                            </svg>
+                            PL
+                        </button>
+
+                        <!-- Flaga EN / UK w kratkę -->
+                        <button type="button" id="btnEn" onclick="setLang('en')">
+                            <svg class="flag-grid-svg" viewBox="0 0 22 14">
+                                <rect x="0" y="0" width="22" height="14" fill="#ffffff"/>
+                                <rect x="0" y="0" width="4" height="4" fill="#012169"/>
+                                <rect x="18" y="0" width="4" height="4" fill="#012169"/>
+                                <rect x="0" y="10" width="4" height="4" fill="#012169"/>
+                                <rect x="18" y="10" width="4" height="4" fill="#012169"/>
+                                <rect x="9.5" y="0" width="3" height="14" fill="#c8102e"/>
+                                <rect x="0" y="5.5" width="22" height="3" fill="#c8102e"/>
+                                <path d="M4 2 L8.5 5.5 M18 2 L13.5 5.5 M4 12 L8.5 8.5 M18 12 L13.5 8.5" stroke="#c8102e" stroke-width="1.6"/>
+                                <path d="M5.5 0 V14 M11 0 V14 M16.5 0 V14 M0 4.66 H22 M0 9.33 H22" stroke="#111111" stroke-width="0.65"/>
+                                <rect x="0" y="0" width="22" height="14" fill="none" stroke="#111111" stroke-width="1"/>
+                            </svg>
+                            EN
+                        </button>
                     </div>
                 </div>
 
@@ -86,9 +145,82 @@
                 </div>
             </div>
         </div>
-        <footer>
+        <footer data-i18n="footer">
             © 2026 SMUKLY NETWORK - NIE BŁĄDŹ W ŚWIECIE
         </footer>
     </div>
+
+    <script>
+        const i18n = {
+            pl: {
+                ticker: "wkrótce nowe wpisy na stronie: smukly network",
+                nav_home: "STRONA GŁÓWNA",
+                nav_about: "O MNIE",
+                nav_gear: "SPRZĘT",
+                nav_music: "MUZYKA",
+                nav_studio: "STUDIO SUL",
+                nav_art: "SZTUKA",
+                nav_blog: "BLOG",
+                nav_contact: "KONTAKT",
+                nav_info: "INFO 24/7",
+                top_line: "smukly network",
+                bottom_line: "sieć bez granic",
+                p1: "yooo tu smukly",
+                p2: "Ta oto strona to moja baza — strefa w, której można znaleźć informacje jak i również moją twórczość:",
+                p3: "Projekty muzyczne — albumy, utwory czy przyszłe projekty<br>Gry i sprzęt — w co pogrywam i na czym, oraz moje sprzęty",
+                p4: "Strona Studio SUL ukońcozna, obczaj info o Studiu i projektach (samo studio jeszcze w przebudowie).",
+                p5: "Pozdro i dziena za odwiedziny!",
+                footer: "© 2026 SMUKLY NETWORK - NIE BŁĄDŹ W ŚWIECIE"
+            },
+            en: {
+                ticker: "new posts coming soon on: smukly network",
+                nav_home: "HOME",
+                nav_about: "ABOUT ME",
+                nav_gear: "GEAR",
+                nav_music: "MUSIC",
+                nav_studio: "STUDIO SUL",
+                nav_art: "ART",
+                nav_blog: "BLOG",
+                nav_contact: "CONTACT",
+                nav_info: "INFO 24/7",
+                top_line: "smukly network",
+                bottom_line: "network without limits",
+                p1: "yooo it's smukly",
+                p2: "This site is my base — a zone where you can find info as well as my creations:",
+                p3: "Music projects — albums, tracks or future projects<br>Games and gear — what I play, on what, and my gear",
+                p4: "Studio SUL page is ready, check info about the Studio and projects (the studio itself is still under construction).",
+                p5: "Peace and thanks for stopping by!",
+                footer: "© 2026 SMUKLY NETWORK - DON'T LOSE YOUR WAY"
+            }
+        };
+
+        function setLang(lang) {
+            localStorage.setItem("sn_lang", lang);
+            document.querySelectorAll("[data-i18n]").forEach((el) => {
+                const key = el.getAttribute("data-i18n");
+                if (i18n[lang] && i18n[lang][key]) {
+                    el.innerHTML = i18n[lang][key];
+                }
+            });
+            document.getElementById("btnPl").classList.toggle("active", lang === "pl");
+            document.getElementById("btnEn").classList.toggle("active", lang === "en");
+        }
+
+        function setTheme(theme) {
+            localStorage.setItem("sn_theme", theme);
+            document.body.classList.remove("theme-black", "theme-striped");
+            if (theme === "black") document.body.classList.add("theme-black");
+            if (theme === "striped") document.body.classList.add("theme-striped");
+
+            const buttons = document.querySelectorAll(".theme-person-btn");
+            buttons.forEach((btn, idx) => {
+                const map = ["default", "black", "striped"];
+                btn.classList.toggle("active", map[idx] === theme);
+            });
+        }
+
+        setLang(localStorage.getItem("sn_lang") || "pl");
+        setTheme(localStorage.getItem("sn_theme") || "default");
+    </script>
 </body>
 </html>
