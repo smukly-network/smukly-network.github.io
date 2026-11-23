@@ -116,11 +116,11 @@ header h1 {
     flex-shrink: 0;
 }
 .sidebar img {
-    margin: 4px 2px;
+    margin: 3px 2px;
     border: 2px solid #ffff00;
     border-radius: 4px;
     image-rendering: pixelated;
-    max-width: 170px;
+    max-width: 82px;
     vertical-align: middle;
 }
 
@@ -215,9 +215,12 @@ header h1 {
     75% { transform: skewY(5deg) scaleX(0.97); }
 }
 
-/* GIF-Y: ZWYKŁY UKŁAD JAK WCZEŚNIEJ, TYLKO ODSTĘP OD ZMIANY JĘZYKÓW */
+/* GIF-Y W DWÓCH RZĘDACH POD FLAGAMI */
 .sidebar-gifs {
     margin-top: 38px;
+}
+.sidebar-gifs > div img {
+    max-width: 165px;
 }
 
 /* MOTYW 2 (DARK AERO) I MOTYW 3 (VECTORDELIA) */
