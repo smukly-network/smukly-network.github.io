@@ -116,11 +116,12 @@ header h1 {
     flex-shrink: 0;
 }
 .sidebar img {
-    margin: 12px 0;
+    margin: 4px 2px;
     border: 2px solid #ffff00;
     border-radius: 4px;
     image-rendering: pixelated;
     max-width: 170px;
+    vertical-align: middle;
 }
 
 /* GÓRA PRAWEGO PANELU: 3 LUDZIKI + FLAGI PL / EN */
