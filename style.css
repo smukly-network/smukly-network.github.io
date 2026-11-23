@@ -72,7 +72,7 @@ header h1 {
     gap: 20px;
 }
 .menu {
-    width: 200px;
+    width: 215px;
     padding: 16px 10px;
     background-color: rgba(17, 0, 68, 0.95);
     border-right: 3px solid #ffff00;
@@ -82,7 +82,7 @@ header h1 {
     flex-direction: column;
 }
 
-/* WYPukły RETRO KAFELEK Z DUŻĄ IKONKĄ (MOGĄCĄ LEKKO WYSTAWAĆ) I POWIĘKSZONĄ NAZWĄ */
+/* LEWY PANEL: RETRO KAFELKI Z DUŻĄ IKONKĄ PO LEWEJ I WYRAŹNYM NAPISem PO PRAWEJ */
 .menu a:not(.menu-info-bottom) {
     display: flex;
     align-items: center;
@@ -91,8 +91,8 @@ header h1 {
     margin: 7px 0;
     padding: 8px 9px;
     background:
-        linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.06) 46%, rgba(160,72,0,0.28) 52%, rgba(255,230,90,0.18) 100%),
-        linear-gradient(90deg, #ffd400 0%, #ffb700 50%, #f59e0b 100%);
+        linear-gradient(180deg, rgba(255,255,255,0.48) 0%, rgba(255,255,255,0.08) 46%, rgba(155,65,0,0.28) 52%, rgba(255,235,100,0.18) 100%),
+        linear-gradient(90deg, #ffd600 0%, #ffb700 50%, #f59e0b 100%);
     text-decoration: none;
     border-top: 3px solid #fffbe6;
     border-left: 3px solid #ffe66d;
@@ -100,7 +100,7 @@ header h1 {
     border-bottom: 3px solid #78350f;
     border-radius: 7px;
     box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.7),
+        inset 0 1px 0 rgba(255, 255, 255, 0.72),
         0 3px 0 #3b0764,
         0 6px 10px rgba(0, 0, 0, 0.75);
     overflow: visible;
@@ -109,39 +109,44 @@ header h1 {
 }
 .menu a:not(.menu-info-bottom) img,
 .menu a:not(.menu-info-bottom) svg {
-    width: 40px;
-    height: 40px;
-    margin-left: -12px;
+    width: 34px;
+    height: 34px;
     flex-shrink: 0;
     object-fit: contain;
     image-rendering: pixelated;
-    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.75));
+    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.72));
     transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .menu a:not(.menu-info-bottom) .nav-label {
     flex: 1;
-    color: #e011a8;
+    min-width: 0;
+    color: #e619b8;
     font-family: "Arial Black", Impact, "Courier New", monospace;
     font-weight: 900;
-    font-size: 14.5px;
-    letter-spacing: 0.4px;
-    line-height: 1.02;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    line-height: 1.05;
     text-align: center;
     text-transform: uppercase;
+    white-space: nowrap;
     text-shadow:
-        -2px -2px 0 #240046,
-         2px -2px 0 #240046,
-        -2px  2px 0 #240046,
-         2px  2px 0 #240046,
-         0px  3px  2px rgba(0, 0, 0, 0.75);
+        -1.5px -1.5px 0 #240046,
+         1.5px -1.5px 0 #240046,
+        -1.5px  1.5px 0 #240046,
+         1.5px  1.5px 0 #240046,
+         0px    2px   2px rgba(0, 0, 0, 0.7);
     transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), color 0.22s ease;
+}
+.menu a:not(.menu-info-bottom) .nav-label.nav-label-long {
+    font-size: 11.5px;
+    letter-spacing: 0.1px;
 }
 
 /* NIEPARZYSTE: IKONKA DO GÓRY (I LEKKO W LEWO), NAPIS W DÓŁ (I LEKKO W PRAWO) */
 .menu a:not(.menu-info-bottom):nth-of-type(odd):hover {
     background:
-        linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.12) 48%, rgba(160,72,0,0.2) 55%, rgba(255,255,150,0.25) 100%),
-        linear-gradient(90deg, #ffe234 0%, #ffc400 50%, #ff9f0a 100%);
+        linear-gradient(180deg, rgba(255,255,255,0.62) 0%, rgba(255,255,255,0.12) 48%, rgba(155,65,0,0.2) 55%, rgba(255,255,150,0.25) 100%),
+        linear-gradient(90deg, #ffe338 0%, #ffc400 50%, #ff9f0a 100%);
     transform: translateY(-2px);
     z-index: 2;
     box-shadow:
@@ -151,7 +156,7 @@ header h1 {
 }
 .menu a:not(.menu-info-bottom):nth-of-type(odd):hover img,
 .menu a:not(.menu-info-bottom):nth-of-type(odd):hover svg {
-    transform: translate(-5px, -8px) rotate(-11deg) scale(1.12);
+    transform: translate(-4px, -6px) rotate(-10deg) scale(1.14);
 }
 .menu a:not(.menu-info-bottom):nth-of-type(odd):hover .nav-label {
     transform: translate(3px, 5px);
@@ -161,8 +166,8 @@ header h1 {
 /* PARZYSTE: IKONKA W DÓŁ (I LEKKO W LEWO), NAPIS DO GÓRY (I LEKKO W PRAWO) */
 .menu a:not(.menu-info-bottom):nth-of-type(even):hover {
     background:
-        linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.12) 48%, rgba(160,72,0,0.2) 55%, rgba(255,255,150,0.25) 100%),
-        linear-gradient(90deg, #ffe234 0%, #ffc400 50%, #ff9f0a 100%);
+        linear-gradient(180deg, rgba(255,255,255,0.62) 0%, rgba(255,255,255,0.12) 48%, rgba(155,65,0,0.2) 55%, rgba(255,255,150,0.25) 100%),
+        linear-gradient(90deg, #ffe338 0%, #ffc400 50%, #ff9f0a 100%);
     transform: translateY(-2px);
     z-index: 2;
     box-shadow:
@@ -172,7 +177,7 @@ header h1 {
 }
 .menu a:not(.menu-info-bottom):nth-of-type(even):hover img,
 .menu a:not(.menu-info-bottom):nth-of-type(even):hover svg {
-    transform: translate(-5px, 8px) rotate(11deg) scale(1.12);
+    transform: translate(-4px, 6px) rotate(10deg) scale(1.14);
 }
 .menu a:not(.menu-info-bottom):nth-of-type(even):hover .nav-label {
     transform: translate(3px, -5px);
@@ -253,13 +258,13 @@ button.blog-back-btn,
     margin-top: 22px;
     padding: 7px 15px;
     background:
-        linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.08) 50%, rgba(160,72,0,0.25) 100%),
-        linear-gradient(90deg, #ffd400 0%, #ffb700 55%, #f59e0b 100%);
-    color: #e011a8;
+        linear-gradient(180deg, rgba(255,255,255,0.48) 0%, rgba(255,255,255,0.08) 50%, rgba(155,65,0,0.25) 100%),
+        linear-gradient(90deg, #ffd600 0%, #ffb700 55%, #f59e0b 100%);
+    color: #e619b8;
     font-family: "Arial Black", Impact, "Courier New", monospace;
     font-weight: 900;
-    font-size: 13px;
-    letter-spacing: 0.6px;
+    font-size: 12.5px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     text-decoration: none;
     border-top: 2px solid #fffbe6;
@@ -269,10 +274,10 @@ button.blog-back-btn,
     border-radius: 6px;
     box-shadow: 0 3px 0 #3b0764, 0 4px 8px rgba(0, 0, 0, 0.75);
     text-shadow:
-        -2px -2px 0 #240046,
-         2px -2px 0 #240046,
-        -2px  2px 0 #240046,
-         2px  2px 0 #240046;
+        -1.5px -1.5px 0 #240046,
+         1.5px -1.5px 0 #240046,
+        -1.5px  1.5px 0 #240046,
+         1.5px  1.5px 0 #240046;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -280,8 +285,8 @@ a.blog-back-btn:hover,
 button.blog-back-btn:hover,
 .back-btn:hover {
     background:
-        linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.12) 50%, rgba(160,72,0,0.2) 100%),
-        linear-gradient(90deg, #ffe234 0%, #ffc400 55%, #ff9f0a 100%);
+        linear-gradient(180deg, rgba(255,255,255,0.62) 0%, rgba(255,255,255,0.12) 50%, rgba(155,65,0,0.2) 100%),
+        linear-gradient(90deg, #ffe338 0%, #ffc400 55%, #ff9f0a 100%);
     color: #ff38cc;
     transform: translateY(-2px);
     box-shadow: 0 4px 0 #581c87, 0 0 12px rgba(255, 255, 0, 0.55);
