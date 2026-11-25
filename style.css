@@ -656,3 +656,169 @@ footer {
     color: #fff;
     text-shadow: 0 0 15px #0ff;
 }
+
+
+/* ============================================================
+   TŁA STRONY + SZKLANE PANELE DLA 3 MOTYWÓW (dodane na końcu)
+   jaśniejsze: lewy/prawy panel  >  środek  >  pasek z napisem i stopka (najciemniejsze)
+   ============================================================ */
+@keyframes panel-drift {
+    0% { background-position: 0 0, 0 0, 0 0; }
+    100% { background-position: 0 -640px, 0 0, 0 0; }
+}
+@keyframes strip-shine {
+    0% { left: -40%; }
+    100% { left: 140%; }
+}
+footer::before,
+.ticker-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0;
+    left: -40%;
+    width: 30%;
+    background: linear-gradient(100deg, transparent, rgba(255,255,255,0.18), transparent);
+    animation: strip-shine 6s ease-in-out infinite;
+    pointer-events: none;
+}
+footer { position: relative; z-index: 0; }
+.ticker { position: relative; z-index: 1; }
+
+/* MOTYW 1: FRUTIGER AERO */
+body {
+    background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1600 900%22 preserveAspectRatio=%22xMidYMax slice%22%3E%3Cdefs%3E%3ClinearGradient id=%22s%22 x1=%220%22 y1=%220%22 x2=%220%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%231e88e5%22/%3E%3Cstop offset=%22.55%22 stop-color=%22%237fd3ff%22/%3E%3Cstop offset=%221%22 stop-color=%22%23e6f9ff%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22b%22 x1=%220%22 y1=%220%22 x2=%220%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23d9f4ff%22/%3E%3Cstop offset=%221%22 stop-color=%22%235fb4e0%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22b2%22 x1=%220%22 y1=%220%22 x2=%220%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23a9dcf5%22 stop-opacity=%22.8%22/%3E%3Cstop offset=%221%22 stop-color=%22%234a9ccc%22 stop-opacity=%22.8%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%220%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23a6f04a%22/%3E%3Cstop offset=%221%22 stop-color=%22%232f9e1e%22/%3E%3C/linearGradient%3E%3CradialGradient id=%22sun%22 cx=%22.5%22 cy=%22.5%22 r=%22.5%22%3E%3Cstop offset=%220%22 stop-color=%22%23fff%22/%3E%3Cstop offset=%221%22 stop-color=%22%23fff%22 stop-opacity=%220%22/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width=%221600%22 height=%22900%22 fill=%22url(%23s)%22/%3E%3Ccircle cx=%221250%22 cy=%22170%22 r=%22220%22 fill=%22url(%23sun)%22 opacity=%22.8%22/%3E%3Cg fill=%22%23fff%22 opacity=%22.85%22%3E%3Cellipse cx=%22300%22 cy=%22160%22 rx=%22140%22 ry=%2238%22/%3E%3Cellipse cx=%22380%22 cy=%22135%22 rx=%2290%22 ry=%2240%22/%3E%3Cellipse cx=%22900%22 cy=%22230%22 rx=%22170%22 ry=%2234%22/%3E%3Cellipse cx=%22980%22 cy=%22205%22 rx=%2290%22 ry=%2236%22/%3E%3C/g%3E%3Cg fill=%22url(%23b2)%22%3E%3Crect x=%2240%22 y=%22430%22 width=%22110%22 height=%22400%22/%3E%3Crect x=%22330%22 y=%22380%22 width=%2290%22 height=%22450%22/%3E%3Crect x=%22640%22 y=%22410%22 width=%22120%22 height=%22420%22/%3E%3Crect x=%22980%22 y=%22360%22 width=%22100%22 height=%22470%22/%3E%3Crect x=%221290%22 y=%22420%22 width=%22130%22 height=%22410%22/%3E%3Crect x=%221500%22 y=%22390%22 width=%2290%22 height=%22440%22/%3E%3C/g%3E%3Cg fill=%22url(%23b)%22 stroke=%22%23fff%22 stroke-width=%223%22%3E%3Crect x=%22150%22 y=%22300%22 width=%22130%22 height=%22530%22 rx=%226%22/%3E%3Crect x=%22460%22 y=%22220%22 width=%22110%22 height=%22610%22 rx=%2255%22/%3E%3Crect x=%22800%22 y=%22320%22 width=%22150%22 height=%22510%22 rx=%226%22/%3E%3Crect x=%221110%22 y=%22250%22 width=%22120%22 height=%22580%22 rx=%226%22/%3E%3Crect x=%221400%22 y=%22330%22 width=%22110%22 height=%22500%22 rx=%226%22/%3E%3C/g%3E%3Cg fill=%22%23fff%22 opacity=%22.55%22%3E%3Crect x=%22165%22 y=%22310%22 width=%2230%22 height=%22500%22/%3E%3Crect x=%22478%22 y=%22240%22 width=%2222%22 height=%22580%22/%3E%3Crect x=%22815%22 y=%22330%22 width=%2234%22 height=%22490%22/%3E%3Crect x=%221125%22 y=%22260%22 width=%2226%22 height=%22560%22/%3E%3Crect x=%221415%22 y=%22340%22 width=%2224%22 height=%22480%22/%3E%3C/g%3E%3Cpath d=%22M0 760 Q400 680 800 750 T1600 730 V900 H0 Z%22 fill=%22url(%23g)%22/%3E%3Cpath d=%22M0 760 Q400 680 800 750 T1600 730%22 fill=%22none%22 stroke=%22%23e8ffd0%22 stroke-width=%226%22 opacity=%22.7%22/%3E%3C/svg%3E") center bottom / cover no-repeat fixed, #000;
+    animation: none;
+}
+body .container {
+    background: rgba(40,120,190,0.22);
+    border-color: rgba(255,255,255,0.85);
+    box-shadow: 0 0 40px rgba(130,220,255,0.7), inset 0 1px 0 rgba(255,255,255,0.35);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+body .menu,
+body .sidebar {
+    position: relative;
+    background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22220%22 height=%22320%22%3E%3Cg fill=%22none%22 stroke=%22%23fff%22 stroke-opacity=%22.7%22%3E%3Ccircle cx=%2240%22 cy=%2260%22 r=%2214%22 fill=%22%23fff%22 fill-opacity=%22.12%22/%3E%3Ccircle cx=%22170%22 cy=%2240%22 r=%227%22 fill=%22%23fff%22 fill-opacity=%22.15%22/%3E%3Ccircle cx=%22150%22 cy=%22190%22 r=%2220%22 fill=%22%23fff%22 fill-opacity=%22.1%22/%3E%3Ccircle cx=%2260%22 cy=%22260%22 r=%229%22 fill=%22%23fff%22 fill-opacity=%22.15%22/%3E%3Ccircle cx=%22100%22 cy=%22130%22 r=%224%22 fill=%22%23fff%22 fill-opacity=%22.4%22/%3E%3C/g%3E%3Cpath d=%22M-10 230 C60 200 120 270 230 220%22 stroke=%22%23fff%22 stroke-opacity=%22.35%22 stroke-width=%222%22 fill=%22none%22/%3E%3C/svg%3E") 0 0 / 220px 320px repeat,
+                linear-gradient(180deg, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.06) 18%, rgba(255,255,255,0) 40%),
+                linear-gradient(180deg, rgba(200,240,255,0.38) 0%, rgba(120,205,245,0.22) 100%);
+    border: 1px solid rgba(255,255,255,0.75);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), inset 0 0 18px rgba(255,255,255,0.12), 0 4px 14px rgba(0,0,0,0.35);
+    backdrop-filter: blur(8px) saturate(1.3);
+    -webkit-backdrop-filter: blur(8px) saturate(1.3);
+    animation: panel-drift 40s linear infinite;
+}
+body .content {
+    background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22300%22%3E%3Cpath d=%22M-10 250 C150 190 350 300 610 220%22 stroke=%22%238fe3ff%22 stroke-opacity=%22.18%22 stroke-width=%222%22 fill=%22none%22/%3E%3Ccircle cx=%22540%22 cy=%2260%22 r=%2218%22 fill=%22none%22 stroke=%22%238fe3ff%22 stroke-opacity=%22.15%22/%3E%3C/svg%3E") right bottom / 600px 300px no-repeat,
+                linear-gradient(180deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 25%),
+                linear-gradient(180deg, rgba(10,60,110,0.55) 0%, rgba(5,35,75,0.68) 100%);
+    border: 1px solid rgba(170,230,255,0.55);
+    border-radius: 8px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 0 30px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+body footer,
+body .ticker-wrapper {
+    background: linear-gradient(180deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0) 50%), linear-gradient(180deg, rgba(4,30,64,0.82) 0%, rgba(2,16,40,0.9) 100%);
+    border: 1px solid rgba(140,215,255,0.5);
+    border-radius: 8px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -6px 12px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+/* MOTYW 2: DARK AERO */
+body.theme-black {
+    background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1600 900%22 preserveAspectRatio=%22xMidYMid slice%22%3E%3Cdefs%3E%3CradialGradient id=%22bg%22 cx=%22.5%22 cy=%22.35%22 r=%22.9%22%3E%3Cstop offset=%220%22 stop-color=%22%231a2a3d%22/%3E%3Cstop offset=%22.6%22 stop-color=%22%23090c12%22/%3E%3Cstop offset=%221%22 stop-color=%22%23000%22/%3E%3C/radialGradient%3E%3CradialGradient id=%22bb%22 cx=%22.35%22 cy=%22.3%22 r=%22.7%22%3E%3Cstop offset=%220%22 stop-color=%22%23cfe8ff%22 stop-opacity=%22.35%22/%3E%3Cstop offset=%22.7%22 stop-color=%22%234a7ab0%22 stop-opacity=%22.08%22/%3E%3Cstop offset=%221%22 stop-color=%22%238cc4ff%22 stop-opacity=%22.3%22/%3E%3C/radialGradient%3E%3ClinearGradient id=%22l%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%220%22%3E%3Cstop offset=%220%22 stop-color=%22%236fb6ff%22 stop-opacity=%220%22/%3E%3Cstop offset=%22.5%22 stop-color=%22%236fb6ff%22 stop-opacity=%22.55%22/%3E%3Cstop offset=%221%22 stop-color=%22%236fb6ff%22 stop-opacity=%220%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%221600%22 height=%22900%22 fill=%22url(%23bg)%22/%3E%3Cg fill=%22none%22 stroke=%22url(%23l)%22 stroke-linecap=%22round%22%3E%3Cpath d=%22M-50 620 C400 480 900 760 1650 520%22 stroke-width=%223%22/%3E%3Cpath d=%22M-50 660 C450 520 950 800 1650 560%22 stroke-width=%221.5%22/%3E%3Cpath d=%22M-50 700 C500 580 1000 820 1650 610%22 stroke-width=%221%22/%3E%3Cpath d=%22M-50 250 C500 380 1100 150 1650 300%22 stroke-width=%221.5%22/%3E%3C/g%3E%3Cg fill=%22url(%23bb)%22 stroke=%22%239fd0ff%22 stroke-opacity=%22.25%22%3E%3Ccircle cx=%22220%22 cy=%22180%22 r=%2260%22/%3E%3Ccircle cx=%22330%22 cy=%22300%22 r=%2224%22/%3E%3Ccircle cx=%221380%22 cy=%22200%22 r=%2280%22/%3E%3Ccircle cx=%221250%22 cy=%22380%22 r=%2230%22/%3E%3Ccircle cx=%22760%22 cy=%22120%22 r=%2236%22/%3E%3Ccircle cx=%221480%22 cy=%22720%22 r=%2250%22/%3E%3Ccircle cx=%22140%22 cy=%22760%22 r=%2240%22/%3E%3Ccircle cx=%22600%22 cy=%22800%22 r=%2222%22/%3E%3C/g%3E%3C/svg%3E") center bottom / cover no-repeat fixed, #000;
+    animation: none;
+}
+body.theme-black .container {
+    background: rgba(10,12,18,0.45);
+    border-color: rgba(170,200,240,0.45);
+    box-shadow: 0 0 40px rgba(110,180,255,0.35), inset 0 1px 0 rgba(255,255,255,0.35);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+body.theme-black .menu,
+body.theme-black .sidebar {
+    position: relative;
+    background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22220%22 height=%22320%22%3E%3Cg fill=%22none%22 stroke=%22%238cc8ff%22 stroke-opacity=%22.22%22%3E%3Ccircle cx=%2240%22 cy=%2270%22 r=%2212%22/%3E%3Ccircle cx=%22170%22 cy=%22200%22 r=%2218%22/%3E%3Ccircle cx=%2280%22 cy=%22270%22 r=%226%22/%3E%3C/g%3E%3Cpath d=%22M-10 140 C60 110 130 180 230 130%22 stroke=%22%238cc8ff%22 stroke-opacity=%22.25%22 stroke-width=%221.5%22 fill=%22none%22/%3E%3C/svg%3E") 0 0 / 220px 320px repeat,
+                linear-gradient(180deg, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.06) 18%, rgba(255,255,255,0) 40%),
+                linear-gradient(180deg, rgba(90,100,120,0.32) 0%, rgba(30,34,44,0.38) 100%);
+    border: 1px solid rgba(200,225,255,0.35);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), inset 0 0 18px rgba(255,255,255,0.12), 0 4px 14px rgba(0,0,0,0.35);
+    backdrop-filter: blur(8px) saturate(1.3);
+    -webkit-backdrop-filter: blur(8px) saturate(1.3);
+    animation: panel-drift 40s linear infinite;
+}
+body.theme-black .content {
+    background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22300%22%3E%3Cpath d=%22M-10 250 C150 190 350 300 610 220%22 stroke=%22%236fb6ff%22 stroke-opacity=%22.12%22 stroke-width=%222%22 fill=%22none%22/%3E%3C/svg%3E") right bottom / 600px 300px no-repeat,
+                linear-gradient(180deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 25%),
+                linear-gradient(180deg, rgba(14,16,22,0.72) 0%, rgba(6,7,10,0.82) 100%);
+    border: 1px solid rgba(140,190,255,0.25);
+    border-radius: 8px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 0 30px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+body.theme-black footer,
+body.theme-black .ticker-wrapper {
+    background: linear-gradient(180deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0) 50%), linear-gradient(180deg, rgba(4,5,8,0.9) 0%, rgba(0,0,0,0.95) 100%);
+    border: 1px solid rgba(140,190,255,0.22);
+    border-radius: 8px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -6px 12px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+/* MOTYW 3: VECTORDELIA */
+body.theme-striped {
+    background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1600 900%22 preserveAspectRatio=%22xMidYMid slice%22%3E%3Cdefs%3E%3CradialGradient id=%22bg%22 cx=%22.5%22 cy=%22.5%22 r=%22.8%22%3E%3Cstop offset=%220%22 stop-color=%22%23fdf4ff%22/%3E%3Cstop offset=%22.45%22 stop-color=%22%23bef264%22/%3E%3Cstop offset=%221%22 stop-color=%22%233f6212%22/%3E%3C/radialGradient%3E%3CradialGradient id=%22cone%22 cx=%22.45%22 cy=%22.4%22 r=%22.6%22%3E%3Cstop offset=%220%22 stop-color=%22%23555%22/%3E%3Cstop offset=%221%22 stop-color=%22%230a0a0a%22/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width=%221600%22 height=%22900%22 fill=%22url(%23bg)%22/%3E%3Cg opacity=%22.25%22 fill=%22none%22 stroke=%22%23fff%22 stroke-width=%223%22%3E%3Ccircle cx=%22800%22 cy=%22450%22 r=%22260%22/%3E%3Ccircle cx=%22800%22 cy=%22450%22 r=%22360%22/%3E%3Ccircle cx=%22800%22 cy=%22450%22 r=%22470%22/%3E%3C/g%3E%3Cpath d=%22M800 450 C1000 300, 1250 600, 1700 380%22 stroke=%22%23ec4899%22 stroke-width=%2214%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M800 450 C600 300, 350 600, -100 380%22 stroke=%22%23ec4899%22 stroke-width=%2214%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M800 450 C1020 270, 1250 625, 1700 420%22 stroke=%22%23facc15%22 stroke-width=%2213%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M800 450 C580 270, 350 625, -100 420%22 stroke=%22%23facc15%22 stroke-width=%2213%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M800 450 C1040 240, 1250 650, 1700 460%22 stroke=%22%2306b6d4%22 stroke-width=%2212%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M800 450 C560 240, 350 650, -100 460%22 stroke=%22%2306b6d4%22 stroke-width=%2212%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M800 450 C1060 210, 1250 675, 1700 500%22 stroke=%22%23a855f7%22 stroke-width=%2211%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M800 450 C540 210, 350 675, -100 500%22 stroke=%22%23a855f7%22 stroke-width=%2211%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M800 450 C1080 180, 1250 700, 1700 540%22 stroke=%22%2384cc16%22 stroke-width=%2210%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M800 450 C520 180, 350 700, -100 540%22 stroke=%22%2384cc16%22 stroke-width=%2210%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M800 450 C1100 150, 1250 725, 1700 580%22 stroke=%22%23f97316%22 stroke-width=%229%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M800 450 C500 150, 350 725, -100 580%22 stroke=%22%23f97316%22 stroke-width=%229%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M800 450 C1120 120, 1250 750, 1700 620%22 stroke=%22%2322d3ee%22 stroke-width=%228%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M800 450 C480 120, 350 750, -100 620%22 stroke=%22%2322d3ee%22 stroke-width=%228%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3Crect x=%22690%22 y=%22300%22 width=%22220%22 height=%22300%22 rx=%2222%22 fill=%22%232e1065%22 stroke=%22%23fff%22 stroke-width=%226%22/%3E%3Ccircle cx=%22800%22 cy=%22350%22 r=%2228%22 fill=%22url(%23cone)%22 stroke=%22%23facc15%22 stroke-width=%224%22/%3E%3Ccircle cx=%22800%22 cy=%22485%22 r=%2278%22 fill=%22url(%23cone)%22 stroke=%22%23ec4899%22 stroke-width=%226%22/%3E%3Ccircle cx=%22800%22 cy=%22485%22 r=%2224%22 fill=%22%23222%22 stroke=%22%2306b6d4%22 stroke-width=%224%22/%3E%3Cg fill=%22%23fff%22%3E%3Ccircle cx=%22300%22 cy=%22200%22 r=%228%22/%3E%3Ccircle cx=%221300%22 cy=%22180%22 r=%2210%22/%3E%3Ccircle cx=%221400%22 cy=%22760%22 r=%227%22/%3E%3Ccircle cx=%22220%22 cy=%22720%22 r=%229%22/%3E%3C/g%3E%3C/svg%3E") center bottom / cover no-repeat fixed, #000;
+    animation: none;
+}
+body.theme-striped .container {
+    background: rgba(132,204,22,0.22);
+    border-color: #ec4899;
+    box-shadow: 0 0 40px rgba(163,230,53,0.7), inset 0 1px 0 rgba(255,255,255,0.35);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+body.theme-striped .menu,
+body.theme-striped .sidebar {
+    position: relative;
+    background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22220%22 height=%22320%22%3E%3Cg fill=%22none%22 stroke-linecap=%22round%22 stroke-width=%224%22 opacity=%22.45%22%3E%3Cpath d=%22M-10 80 C50 40 110 120 230 70%22 stroke=%22%23ec4899%22/%3E%3Cpath d=%22M-10 95 C50 55 110 135 230 85%22 stroke=%22%2306b6d4%22/%3E%3Cpath d=%22M-10 240 C60 200 120 280 230 230%22 stroke=%22%23facc15%22/%3E%3Cpath d=%22M-10 255 C60 215 120 295 230 245%22 stroke=%22%23a855f7%22/%3E%3C/g%3E%3Cg fill=%22%23fff%22 opacity=%22.6%22%3E%3Ccircle cx=%22180%22 cy=%22160%22 r=%225%22/%3E%3Ccircle cx=%2240%22 cy=%22180%22 r=%223%22/%3E%3C/g%3E%3C/svg%3E") 0 0 / 220px 320px repeat,
+                linear-gradient(180deg, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.06) 18%, rgba(255,255,255,0) 40%),
+                linear-gradient(180deg, rgba(236,252,203,0.45) 0%, rgba(190,242,100,0.28) 100%);
+    border: 1px solid rgba(255,255,255,0.85);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), inset 0 0 18px rgba(255,255,255,0.12), 0 4px 14px rgba(0,0,0,0.35);
+    backdrop-filter: blur(8px) saturate(1.3);
+    -webkit-backdrop-filter: blur(8px) saturate(1.3);
+    animation: panel-drift 40s linear infinite;
+}
+body.theme-striped .content {
+    background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22300%22%3E%3Cg fill=%22none%22 stroke-width=%223%22 opacity=%22.18%22%3E%3Cpath d=%22M-10 250 C150 190 350 300 610 220%22 stroke=%22%23ec4899%22/%3E%3Cpath d=%22M-10 265 C150 205 350 315 610 235%22 stroke=%22%2306b6d4%22/%3E%3C/g%3E%3C/svg%3E") right bottom / 600px 300px no-repeat,
+                linear-gradient(180deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 25%),
+                linear-gradient(180deg, rgba(40,70,10,0.62) 0%, rgba(25,46,6,0.74) 100%);
+    border: 1px solid rgba(236,72,153,0.55);
+    border-radius: 8px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 0 30px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+body.theme-striped footer,
+body.theme-striped .ticker-wrapper {
+    background: linear-gradient(180deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0) 50%), linear-gradient(180deg, rgba(20,38,5,0.85) 0%, rgba(10,22,2,0.92) 100%);
+    border: 1px solid rgba(6,182,212,0.6);
+    border-radius: 8px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -6px 12px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+/* czytelny tekst w środku przy ciemniejszym tle Vectordelii */
+body.theme-striped .content { color: #ecfccb; }
+body.theme-striped .content p { text-shadow: 0 1px 2px rgba(0,0,0,0.6); }
