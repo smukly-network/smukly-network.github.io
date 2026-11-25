@@ -1252,3 +1252,10 @@ body.theme-striped .quote-box { border-color: rgba(46, 16, 101, 0.6); color: #14
 /* --- DARK AERO: bez zieleni i żółci w przyciskach podstron --- */
 body.theme-black .blog-post-link:hover { box-shadow: 0 0 14px rgba(170, 220, 255, 0.6); }
 body.theme-black .content h2.section-title { border-bottom-color: rgba(170, 220, 255, 0.55); }
+
+
+/* ============================================================
+   MOTYW NA POZIOMIE <html> - brak migotania i zgodność między podstronami
+   ============================================================ */
+html[data-theme="black"] body { background-attachment: fixed; }
+html[data-theme="striped"] body { background-attachment: fixed; }
