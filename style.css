@@ -82,127 +82,136 @@ header h1 {
     flex-direction: column;
 }
 
-/* LEWY PANEL: RETRO KAFELKI Z DUŻĄ IKONKĄ PO LEWEJ I WYRAŹNYM NAPISem PO PRAWEJ */
+
+/* LEWY PANEL: PRZYCISKI PODSTRON - 3 MOTYWY (kolory sterowane zmiennymi) */
+body {
+    --nav-shine-color: rgba(255, 255, 255, 0.85);
+    --nav-shine: linear-gradient(105deg, transparent 40%, var(--nav-shine-color) 50%, transparent 60%);
+
+    /* MOTYW 1: FRUTIGER AERO - biale, przezroczyste szklo z kreska polysku */
+    --nav-base: linear-gradient(180deg, rgba(235, 248, 255, 0.82) 0%, rgba(190, 232, 255, 0.62) 100%);
+    --nav-gloss: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 49%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+    --nav-border-color: rgba(255, 255, 255, 0.95);
+    --nav-border-hover-color: #ffffff;
+    --nav-shadow: inset 0 0 0 1px rgba(110, 200, 240, 0.55), inset 0 -7px 10px rgba(70, 190, 240, 0.35), 0 3px 8px rgba(0, 0, 0, 0.5);
+    --nav-shadow-hover: inset 0 0 0 1px rgba(110, 210, 250, 0.85), inset 0 -7px 12px rgba(60, 200, 255, 0.5), 0 5px 12px rgba(0, 0, 0, 0.5), 0 0 16px rgba(130, 225, 255, 0.9);
+    --nav-active-base: linear-gradient(180deg, rgba(255, 255, 255, 0.97) 0%, rgba(150, 236, 255, 0.85) 100%);
+    --nav-shadow-active: inset 0 0 0 1px rgba(90, 210, 250, 0.9), inset 0 -7px 12px rgba(60, 210, 255, 0.55), 0 0 18px rgba(150, 235, 255, 0.95), 0 3px 8px rgba(0, 0, 0, 0.45);
+    --nav-text: #052a4d;
+    --nav-text-hover: #00508a;
+    --nav-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 0 8px rgba(255, 255, 255, 0.9);
+}
+/* MOTYW 2: DARK AERO - ciemniejsza wersja szkla */
+body.theme-black {
+    --nav-shine-color: rgba(255, 255, 255, 0.38);
+    --nav-base: linear-gradient(180deg, rgba(74, 78, 90, 0.92) 0%, rgba(14, 15, 19, 0.96) 100%);
+    --nav-gloss: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.08) 49%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+    --nav-border-color: rgba(255, 255, 255, 0.5);
+    --nav-border-hover-color: rgba(170, 215, 255, 0.95);
+    --nav-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6), inset 0 -7px 10px rgba(90, 170, 255, 0.18), 0 3px 8px rgba(0, 0, 0, 0.75);
+    --nav-shadow-hover: inset 0 0 0 1px rgba(0, 0, 0, 0.6), inset 0 -7px 12px rgba(90, 170, 255, 0.32), 0 5px 12px rgba(0, 0, 0, 0.75), 0 0 16px rgba(120, 190, 255, 0.7);
+    --nav-active-base: linear-gradient(180deg, rgba(70, 120, 180, 0.95) 0%, rgba(10, 24, 48, 0.97) 100%);
+    --nav-shadow-active: inset 0 0 0 1px rgba(0, 0, 0, 0.6), inset 0 -7px 12px rgba(100, 180, 255, 0.4), 0 0 18px rgba(120, 195, 255, 0.85), 0 3px 8px rgba(0, 0, 0, 0.7);
+    --nav-text: #f3f8ff;
+    --nav-text-hover: #ffffff;
+    --nav-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.95), 0 0 8px rgba(110, 190, 255, 0.45);
+}
+/* MOTYW 3: VECTORDELIA - paski: zielony, niebieski, rozowy */
+body.theme-striped {
+    --nav-shine-color: rgba(255, 255, 255, 0.6);
+    --nav-base: linear-gradient(180deg, #84cc16 0%, #84cc16 33.33%, #06b6d4 33.33%, #06b6d4 66.66%, #ec4899 66.66%, #ec4899 100%);
+    --nav-gloss: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 30%);
+    --nav-border-color: #4c1d95;
+    --nav-border-hover-color: #4c1d95;
+    --nav-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.85), 0 3px 0 #4c1d95;
+    --nav-shadow-hover: inset 0 0 0 2px #ffffff, 0 5px 0 #4c1d95, 0 0 14px rgba(236, 72, 153, 0.8);
+    --nav-active-base: linear-gradient(180deg, #a3e635 0%, #a3e635 33.33%, #22d3ee 33.33%, #22d3ee 66.66%, #f472b6 66.66%, #f472b6 100%);
+    --nav-shadow-active: inset 0 0 0 2px #ffffff, 0 0 0 3px #facc15, 0 3px 0 3px #4c1d95;
+    --nav-text: #ffffff;
+    --nav-text-hover: #ffffff;
+    --nav-text-shadow: -1.5px -1.5px 0 #2e1065, 0 -1.5px 0 #2e1065, 1.5px -1.5px 0 #2e1065, -1.5px 0 0 #2e1065, 1.5px 0 0 #2e1065, -1.5px 1.5px 0 #2e1065, 0 1.5px 0 #2e1065, 1.5px 1.5px 0 #2e1065;
+}
+
 .menu a:not(.menu-info-bottom) {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 8px;
-    margin: 7px 0;
-    padding: 8px 9px;
-    background:
-        linear-gradient(180deg, rgba(255,255,255,0.48) 0%, rgba(255,255,255,0.08) 46%, rgba(155,65,0,0.28) 52%, rgba(255,235,100,0.18) 100%),
-        linear-gradient(90deg, #ffd600 0%, #ffb700 50%, #f59e0b 100%);
+    gap: 6px;
+    box-sizing: border-box;
+    height: 48px;
+    margin: 8px 0;
+    padding: 0 12px 0 8px;
+    background-image: var(--nav-shine), var(--nav-gloss), var(--nav-base);
+    background-size: 250% 100%, 100% 100%, 100% 100%;
+    background-position: 100% 0, 0 0, 0 0;
+    background-repeat: no-repeat;
     text-decoration: none;
-    border-top: 3px solid #fffbe6;
-    border-left: 3px solid #ffe66d;
-    border-right: 3px solid #b45309;
-    border-bottom: 3px solid #78350f;
-    border-radius: 7px;
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.72),
-        0 3px 0 #3b0764,
-        0 6px 10px rgba(0, 0, 0, 0.75);
+    border: 1px solid var(--nav-border-color);
+    border-radius: 10px;
+    box-shadow: var(--nav-shadow);
     overflow: visible;
     position: relative;
-    transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.22s ease, border-color 0.22s ease, background-position 0s;
 }
 .menu a:not(.menu-info-bottom) img,
 .menu a:not(.menu-info-bottom) svg {
-    width: 34px;
-    height: 34px;
+    width: 56px;
+    height: 56px;
+    margin: 0 0 0 -14px;
     flex-shrink: 0;
     object-fit: contain;
-    image-rendering: pixelated;
-    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.72));
-    transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+    image-rendering: auto;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.45));
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .menu a:not(.menu-info-bottom) .nav-label {
     flex: 1;
     min-width: 0;
-    color: #e619b8;
-    font-family: "Arial Black", Impact, "Courier New", monospace;
-    font-weight: 900;
-    font-size: 13px;
-    letter-spacing: 0.3px;
-    line-height: 1.05;
+    color: var(--nav-text);
+    font-family: "Segoe UI", "Frutiger", "Myriad Pro", "Trebuchet MS", Verdana, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    letter-spacing: 0.6px;
+    line-height: 1.1;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
-    text-shadow:
-        -1.5px -1.5px 0 #240046,
-         1.5px -1.5px 0 #240046,
-        -1.5px  1.5px 0 #240046,
-         1.5px  1.5px 0 #240046,
-         0px    2px   2px rgba(0, 0, 0, 0.7);
-    transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), color 0.22s ease;
+    text-shadow: var(--nav-text-shadow);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    transition: color 0.22s ease;
 }
 .menu a:not(.menu-info-bottom) .nav-label.nav-label-long {
-    font-size: 11.5px;
-    letter-spacing: 0.1px;
+    font-size: 12.5px;
+    letter-spacing: 0.3px;
 }
 
-/* NIEPARZYSTE: IKONKA DO GÓRY (I LEKKO W LEWO), NAPIS W DÓŁ (I LEKKO W PRAWO) */
-.menu a:not(.menu-info-bottom):nth-of-type(odd):hover {
-    background:
-        linear-gradient(180deg, rgba(255,255,255,0.62) 0%, rgba(255,255,255,0.12) 48%, rgba(155,65,0,0.2) 55%, rgba(255,255,150,0.25) 100%),
-        linear-gradient(90deg, #ffe338 0%, #ffc400 50%, #ff9f0a 100%);
+/* NAJECHANIE: przycisk unosi sie, blysk przesuwa sie po szkle, ikonka podskakuje */
+.menu a:not(.menu-info-bottom):hover {
     transform: translateY(-2px);
     z-index: 2;
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.85),
-        0 4px 0 #581c87,
-        0 0 14px rgba(255, 255, 0, 0.55);
+    border-color: var(--nav-border-hover-color);
+    box-shadow: var(--nav-shadow-hover);
+    background-position: 0% 0, 0 0, 0 0;
+    transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.22s ease, border-color 0.22s ease, background-position 0.7s ease;
 }
-.menu a:not(.menu-info-bottom):nth-of-type(odd):hover img,
-.menu a:not(.menu-info-bottom):nth-of-type(odd):hover svg {
-    transform: translate(-4px, -6px) rotate(-10deg) scale(1.14);
+.menu a:not(.menu-info-bottom):hover img,
+.menu a:not(.menu-info-bottom):hover svg {
+    transform: translateY(-3px) rotate(-8deg) scale(1.12);
 }
-.menu a:not(.menu-info-bottom):nth-of-type(odd):hover .nav-label {
-    transform: translate(3px, 5px);
-    color: #ff38cc;
-}
-
-/* PARZYSTE: IKONKA W DÓŁ (I LEKKO W LEWO), NAPIS DO GÓRY (I LEKKO W PRAWO) */
-.menu a:not(.menu-info-bottom):nth-of-type(even):hover {
-    background:
-        linear-gradient(180deg, rgba(255,255,255,0.62) 0%, rgba(255,255,255,0.12) 48%, rgba(155,65,0,0.2) 55%, rgba(255,255,150,0.25) 100%),
-        linear-gradient(90deg, #ffe338 0%, #ffc400 50%, #ff9f0a 100%);
-    transform: translateY(-2px);
-    z-index: 2;
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.85),
-        0 4px 0 #581c87,
-        0 0 14px rgba(255, 255, 0, 0.55);
-}
-.menu a:not(.menu-info-bottom):nth-of-type(even):hover img,
-.menu a:not(.menu-info-bottom):nth-of-type(even):hover svg {
-    transform: translate(-4px, 6px) rotate(10deg) scale(1.14);
-}
-.menu a:not(.menu-info-bottom):nth-of-type(even):hover .nav-label {
-    transform: translate(3px, -5px);
-    color: #c71585;
+.menu a:not(.menu-info-bottom):hover .nav-label {
+    color: var(--nav-text-hover);
 }
 
-/* AKTYWNY KAFELEK */
+/* AKTYWNY PRZYCISK */
 .menu a:not(.menu-info-bottom).active {
-    background:
-        linear-gradient(180deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.18) 50%, rgba(255,180,0,0.25) 100%),
-        linear-gradient(90deg, #fff147 0%, #ffca00 55%, #ff9e00 100%);
-    border-top-color: #ffffff;
-    border-left-color: #ffffff;
-    border-right-color: #fff3a1;
-    border-bottom-color: #d97706;
-    box-shadow:
-        0 0 14px rgba(255, 255, 255, 0.75),
-        0 3px 0 #581c87;
-}
-.menu a:not(.menu-info-bottom).active .nav-label {
-    color: #b5179e;
+    background-image: var(--nav-shine), var(--nav-gloss), var(--nav-active-base);
+    border-color: var(--nav-border-hover-color);
+    box-shadow: var(--nav-shadow-active);
 }
 .menu a:not(.menu-info-bottom):active {
-    transform: translateY(2px);
-    box-shadow: 0 1px 0 #3b0764, 0 0 10px #ffff00;
+    transform: translateY(1px);
 }
 
 /* MAŁY, DYSKRETNY PRZYCISK INFO NA SAMYM DOLE LEWEGO PANELU */
