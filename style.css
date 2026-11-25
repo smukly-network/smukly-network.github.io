@@ -822,3 +822,66 @@ body.theme-striped .ticker-wrapper {
 /* czytelny tekst w środku przy ciemniejszym tle Vectordelii */
 body.theme-striped .content { color: #ecfccb; }
 body.theme-striped .content p { text-shadow: 0 1px 2px rgba(0,0,0,0.6); }
+
+/* ============================================================
+   POPRAWKI: jaśniejsze paski w Frutiger Aero, zielone szkło w Vectordelii
+   ============================================================ */
+
+/* FRUTIGER AERO - jaśniejszy pasek z napisem i stopka */
+body footer,
+body .ticker-wrapper {
+    background: linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0) 51%),
+                linear-gradient(180deg, rgba(70,165,225,0.55) 0%, rgba(25,105,175,0.62) 100%);
+    border: 1px solid rgba(255,255,255,0.8);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 -6px 12px rgba(120,220,255,0.35), 0 2px 8px rgba(0,0,0,0.3);
+}
+body footer { color: #ffffff; text-shadow: 0 1px 2px rgba(0,40,80,0.9); }
+body .ticker { color: #ffffff; text-shadow: 0 1px 2px rgba(0,40,80,0.9); }
+/* FRUTIGER AERO - trochę jaśniejszy środek */
+body .content {
+    background: linear-gradient(180deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0) 25%),
+                linear-gradient(180deg, rgba(25,95,160,0.45) 0%, rgba(12,60,115,0.56) 100%);
+}
+
+/* DARK AERO - bez zmian (przywrócenie ciemnych pasków po nadpisaniu wyżej) */
+body.theme-black footer,
+body.theme-black .ticker-wrapper {
+    background: linear-gradient(180deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0) 50%),
+                linear-gradient(180deg, rgba(4,5,8,0.9) 0%, rgba(0,0,0,0.95) 100%);
+    border: 1px solid rgba(140,190,255,0.22);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -6px 12px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.4);
+}
+body.theme-black footer { color: #ffff00; text-shadow: none; }
+body.theme-black .ticker { color: #00ff00; text-shadow: none; }
+body.theme-black .content {
+    background: linear-gradient(180deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 25%),
+                linear-gradient(180deg, rgba(14,16,22,0.72) 0%, rgba(6,7,10,0.82) 100%);
+}
+
+/* VECTORDELIA - zielone, przezroczyste paski */
+body.theme-striped footer,
+body.theme-striped .ticker-wrapper {
+    background: linear-gradient(180deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0) 51%),
+                linear-gradient(180deg, rgba(132,204,22,0.5) 0%, rgba(63,98,18,0.6) 100%);
+    border: 1px solid rgba(236,252,203,0.8);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -6px 12px rgba(190,242,100,0.3), 0 2px 8px rgba(0,0,0,0.3);
+}
+body.theme-striped footer { color: #ffffff; text-shadow: 0 1px 2px rgba(30,50,5,0.95); }
+body.theme-striped .ticker { color: #ffffff; text-shadow: 0 1px 2px rgba(30,50,5,0.95); }
+body.theme-striped .content {
+    background: linear-gradient(180deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 25%),
+                linear-gradient(180deg, rgba(40,70,10,0.62) 0%, rgba(25,46,6,0.74) 100%);
+}
+
+/* VECTORDELIA - spokojniejsze, szklane przyciski podstron i INFO (zamiast pasków) */
+body.theme-striped {
+    --nav-shine-color: rgba(255, 255, 255, 0.55);
+    --nav-base: linear-gradient(180deg, rgba(217, 249, 157, 0.55) 0%, rgba(132, 204, 22, 0.42) 100%);
+    --nav-gloss: linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.15) 49%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+    --nav-border-color: rgba(255, 255, 255, 0.85);
+    --nav-border-hover-color: #ffffff;
+    --nav-shadow: inset 0 0 0 1px rgba(77, 124, 15, 0.45), inset 0 -6px 10px rgba(236, 72, 153, 0.18), 0 3px 8px rgba(0, 0, 0, 0.35);
+    --nav-shadow-hover: inset 0 0 0 1px rgba(77, 124, 15, 0.6), inset 0 -6px 12px rgba(6, 182, 212, 0.3), 0 5px 12px rgba(0, 0, 0, 0.35), 0 0 14px rgba(190, 242, 100, 0.85);
+    --nav-active-base: linear-gradient(180deg, rgba(236, 252, 203, 0.85) 0%, rgba(163, 230, 53, 0.65) 100%);
+    --nav-shadow-active: inset 0 0 0 1px rgba(77, 124, 15, 0.6), inset 0 -6px 12px rgba(236, 72, 153, 0.3), 0 0 16px rgba(217, 249, 157, 0.95), 0 3px 8px rgba(0, 0, 0, 0.35);
+}
