@@ -1567,3 +1567,65 @@ body .profile-card,
 /* linki w tresci */
 body .content a { color: #ffd0d0; }
 body .content a:hover { color: #ffffff; }
+
+
+/* ============================================================
+   MAGIC TOUCH - subtelne efekty na podstronach (dodane na koncu)
+   ============================================================ */
+/* delikatne przesuwajace sie tlo wewnatrz kart */
+.profile-card::before,
+.more-media::before,
+.rg-box::before,
+.zkt-card::before,
+.x360-console::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    height: 90px;
+    background: radial-gradient(120% 90% at 50% -30%, rgba(255, 120, 120, 0.22), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+.profile-card, .more-media, .rg-box, .zkt-card, .x360-console { position: relative; overflow: hidden; }
+.profile-card > *, .more-media > *, .rg-box > *, .zkt-card > *, .x360-console > * { position: relative; z-index: 1; }
+
+/* delikatny odblask na ramkach ze zdjeciami */
+.zkt-image::after,
+.x360-image::after,
+.rg-thumb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 45%);
+    pointer-events: none;
+}
+.zkt-image, .x360-image, .rg-thumb { position: relative; }
+
+/* wpisy gier - delikatny czerwony akcent po lewej */
+.rg-item { position: relative; }
+.rg-item::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 10px; bottom: 10px;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, rgba(255, 70, 70, 0.75), transparent);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+.rg-item:hover::before { opacity: 1; }
+
+/* tabela na 360 - delikatne podswietlenie rzedu */
+.x360-grid tr { transition: background 0.2s ease; }
+
+/* tytuly z lekkim oddechem swiatla */
+.zkt-title, .romy-title, .x360-title, .rg-title, .more-media h2 {
+    animation: soft-glow 5s ease-in-out infinite;
+}
+@keyframes soft-glow {
+    0%, 100% { text-shadow: 0 0 8px rgba(255, 70, 70, 0.55), 0 2px 5px rgba(0, 0, 0, 0.9); }
+    50% { text-shadow: 0 0 16px rgba(255, 110, 110, 0.8), 0 2px 5px rgba(0, 0, 0, 0.9); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .zkt-title, .romy-title, .x360-title, .rg-title, .more-media h2 { animation: none; }
+}
