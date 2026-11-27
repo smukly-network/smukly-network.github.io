@@ -1652,3 +1652,56 @@ body .content a:hover { color: #ffffff; }
 
 /* mniejszy naglowek "MOJE GRY" */
 .rg-box-sm .rg-title { font-size: 0.95rem; letter-spacing: 2px; opacity: 0.92; }
+
+
+/* ============================================================
+   ROMY - poprawiony uklad wpisow gier (dodane na koncu)
+   ============================================================ */
+/* wpis: zdjecie po lewej na stale, tekst obok - bez naprzemiennosci */
+.rg-box .rg-item,
+.rg-box .rg-item:nth-child(even) {
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 0;
+}
+/* zdjecie mniejsze i kwadratowe, nie rozciaga wiersza */
+.rg-box .rg-thumb {
+    flex: 0 0 92px;
+    width: 92px;
+    height: 92px;
+    aspect-ratio: auto;
+    border-radius: 6px;
+}
+.rg-box .rg-thumb img { object-fit: cover; }
+
+/* tekst po prawej, ulozony rowno */
+.rg-box .rg-body { flex: 1 1 auto; }
+.rg-box .rg-name { font-size: 1rem; margin-bottom: 2px; }
+.rg-box .rg-date {
+    margin: 0 0 8px;
+    font-size: 0.72rem;
+    opacity: 0.65;
+    letter-spacing: 0.5px;
+}
+.rg-box .rg-desc {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    opacity: 0.92;
+}
+/* link mniejszy, nie rozciaga wiersza */
+.rg-box .rg-link {
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+}
+.rg-box .rg-link::before { width: 18px; height: 18px; }
+
+/* na waskim ekranie zdjecie nad tekstem */
+@media (max-width: 768px) {
+    .rg-box .rg-item,
+    .rg-box .rg-item:nth-child(even) { flex-direction: column; align-items: flex-start; }
+    .rg-box .rg-thumb { flex: none; width: 100%; height: 150px; }
+}
