@@ -1629,3 +1629,26 @@ body .content a:hover { color: #ffffff; }
 @media (prefers-reduced-motion: reduce) {
     .zkt-title, .romy-title, .x360-title, .rg-title, .more-media h2 { animation: none; }
 }
+
+
+/* ============================================================
+   ROMY - jeden rzad na grupe gier, mniej ramek (dodane na koncu)
+   ============================================================ */
+/* wewnatrz okna nie ma juz osobnych ramek na kazda gre */
+.rg-box .rg-item {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+.rg-box .rg-item:last-child { border-bottom: 0; padding-bottom: 0; }
+.rg-box .rg-item:first-child { padding-top: 0; }
+.rg-box .rg-item:hover { background: transparent; }
+.rg-box .rg-item::before { display: none; }
+
+/* lista w srodku okna - rowna linia jak tabela */
+.rg-list { gap: 0; }
+
+/* mniejszy naglowek "MOJE GRY" */
+.rg-box-sm .rg-title { font-size: 0.95rem; letter-spacing: 2px; opacity: 0.92; }
