@@ -11,10 +11,8 @@
 </head>
 
 <body>
+    <div class="bg-fx" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
     <div class="container">
-        <header>
-            <h1>SMUKLY NETWORK</h1>
-        </header>
         <div class="ticker-wrapper">
             <div class="ticker" data-i18n="ticker">wkrótce nowe wpisy na stronie: smukly network</div>
         </div>
@@ -49,93 +47,6 @@
             </div>
             <div class="sidebar">
                 <div class="sidebar-top">
-                    <div class="theme-people">
-                        <button type="button" class="theme-person-btn active" onclick="setTheme('default')" title="Frutiger Aero" aria-label="Frutiger Aero">
-                            <svg class="doll-svg" viewBox="0 0 64 74">
-                                <defs>
-                                    <radialGradient id="headAero" cx="0.38" cy="0.32" r="0.75">
-                                        <stop offset="0%" stop-color="#d6faff"/>
-                                        <stop offset="55%" stop-color="#22c3e6"/>
-                                        <stop offset="100%" stop-color="#00607a"/>
-                                    </radialGradient>
-                                    <linearGradient id="bodyAero" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stop-color="#d6faff"/>
-                                        <stop offset="50%" stop-color="#22c3e6"/>
-                                        <stop offset="100%" stop-color="#00607a"/>
-                                    </linearGradient>
-                                    <linearGradient id="glossAero" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
-                                        <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-                                    </linearGradient>
-                                </defs>
-                                <path d="M12 70 C11 50, 19 38, 32 38 C45 38, 53 50, 52 70 Z" fill="url(#bodyAero)" stroke="#004e64" stroke-width="1.8" stroke-linejoin="round"/>
-                                <path d="M18 54 C19 45, 25 41, 32 41 C39 41, 45 45, 46 54 C40 50, 24 50, 18 54 Z" fill="url(#glossAero)" opacity="0.75"/>
-                                
-                                <circle cx="32" cy="19" r="14" fill="url(#headAero)" stroke="#004e64" stroke-width="1.8"/>
-                                <ellipse cx="29" cy="12" rx="8" ry="4.5" fill="url(#glossAero)"/>
-                                <circle cx="38" cy="26" r="1.6" fill="#ffffff" opacity="0.55"/>
-                            </svg>
-                        </button>
-
-                        <button type="button" class="theme-person-btn" onclick="setTheme('black')" title="Dark Aero" aria-label="Dark Aero">
-                            <svg class="doll-svg" viewBox="0 0 64 74">
-                                <defs>
-                                    <radialGradient id="headDark" cx="0.38" cy="0.32" r="0.75">
-                                        <stop offset="0%" stop-color="#8a8f99"/>
-                                        <stop offset="55%" stop-color="#2a2d33"/>
-                                        <stop offset="100%" stop-color="#050506"/>
-                                    </radialGradient>
-                                    <linearGradient id="bodyDark" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stop-color="#8a8f99"/>
-                                        <stop offset="50%" stop-color="#2a2d33"/>
-                                        <stop offset="100%" stop-color="#050506"/>
-                                    </linearGradient>
-                                    <linearGradient id="glossDark" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
-                                        <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-                                    </linearGradient>
-                                </defs>
-                                <path d="M12 70 C11 50, 19 38, 32 38 C45 38, 53 50, 52 70 Z" fill="url(#bodyDark)" stroke="#9aa3b0" stroke-width="1.8" stroke-linejoin="round"/>
-                                <path d="M18 54 C19 45, 25 41, 32 41 C39 41, 45 45, 46 54 C40 50, 24 50, 18 54 Z" fill="url(#glossDark)" opacity="0.75"/>
-                                
-                                <circle cx="32" cy="19" r="14" fill="url(#headDark)" stroke="#9aa3b0" stroke-width="1.8"/>
-                                <ellipse cx="29" cy="12" rx="8" ry="4.5" fill="url(#glossDark)"/>
-                                <circle cx="38" cy="26" r="1.6" fill="#ffffff" opacity="0.55"/>
-                            </svg>
-                        </button>
-
-                        <button type="button" class="theme-person-btn" onclick="setTheme('striped')" title="Vectordelia" aria-label="Vectordelia">
-                            <svg class="doll-svg" viewBox="0 0 64 74">
-                                <defs>
-                                    <radialGradient id="headVd" cx="0.38" cy="0.32" r="0.75">
-                                        <stop offset="0%" stop-color="#e9ffb0"/>
-                                        <stop offset="55%" stop-color="#84cc16"/>
-                                        <stop offset="100%" stop-color="#3f6212"/>
-                                    </radialGradient>
-                                    <linearGradient id="bodyVd" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stop-color="#e9ffb0"/>
-                                        <stop offset="50%" stop-color="#84cc16"/>
-                                        <stop offset="100%" stop-color="#3f6212"/>
-                                    </linearGradient>
-                                    <linearGradient id="glossVd" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
-                                        <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-                                    </linearGradient>
-                                </defs>
-                                <path d="M12 70 C11 50, 19 38, 32 38 C45 38, 53 50, 52 70 Z" fill="url(#bodyVd)" stroke="#365314" stroke-width="1.8" stroke-linejoin="round"/>
-                                <path d="M18 54 C19 45, 25 41, 32 41 C39 41, 45 45, 46 54 C40 50, 24 50, 18 54 Z" fill="url(#glossVd)" opacity="0.75"/>
-                                <path d="M15 60 C22 50, 30 63, 38 51 C42 45, 47 53, 50 59" fill="none" stroke="#ec4899" stroke-width="2.4" stroke-linecap="round"/>
-                                <path d="M15 66 C24 59, 33 69, 49 61" fill="none" stroke="#facc15" stroke-width="2.2" stroke-linecap="round"/>
-                                <circle cx="22" cy="51" r="2.3" fill="#06b6d4"/>
-                                <circle cx="44" cy="55" r="2.3" fill="#a855f7"/>
-                                <circle cx="32" cy="19" r="14" fill="url(#headVd)" stroke="#365314" stroke-width="1.8"/>
-                                <ellipse cx="29" cy="12" rx="8" ry="4.5" fill="url(#glossVd)"/>
-                                <path d="M23 16 C27 10, 37 11, 40 17 C42 21, 36 25, 32 22" fill="none" stroke="#ec4899" stroke-width="2.2" stroke-linecap="round"/>
-                                <path d="M25 26 C30 29, 37 27, 40 23" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="38" cy="26" r="1.6" fill="#ffffff" opacity="0.55"/>
-                            </svg>
-                        </button>
-                    </div>
 
                     <div class="lang-switch">
                         <button type="button" id="btnPl" class="active" onclick="setLang('pl')" title="zmień na polski" aria-label="zmień na polski">
@@ -238,21 +149,8 @@
             document.getElementById("btnEn").classList.toggle("active", lang === "en");
         }
 
-        function setTheme(theme) {
-            localStorage.setItem("sn_theme", theme);
-            document.body.classList.remove("theme-black", "theme-striped");
-            if (theme === "black") document.body.classList.add("theme-black");
-            if (theme === "striped") document.body.classList.add("theme-striped");
-
-            const buttons = document.querySelectorAll(".theme-person-btn");
-            buttons.forEach((btn, idx) => {
-                const map = ["default", "black", "striped"];
-                btn.classList.toggle("active", map[idx] === theme);
-            });
-        }
-
         setLang(localStorage.getItem("sn_lang") || "pl");
-        setTheme(localStorage.getItem("sn_theme") || "default");
+        localStorage.removeItem("sn_theme");
     </script>
 </body>
 </html>
