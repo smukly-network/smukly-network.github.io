@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RADAR - SMUKLY NETWORK</title>
+    <link rel="icon" href="server-icon.png" type="image/png">
+    <link rel="shortcut icon" href="server-icon.png" type="image/png">
+    <style type="text/css">@font-face {font-family:'VT323';font-style:normal;font-weight:400;src:url(/cf-fonts/s/vt323/5.2.7/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'VT323';font-style:normal;font-weight:400;src:url(/cf-fonts/s/vt323/5.2.7/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'VT323';font-style:normal;font-weight:400;src:url(/cf-fonts/s/vt323/5.2.7/latin-ext/400/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Comfortaa';font-style:normal;font-weight:700;src:url(/cf-fonts/v/comfortaa/5.2.8/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Comfortaa';font-style:normal;font-weight:700;src:url(/cf-fonts/v/comfortaa/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Comfortaa';font-style:normal;font-weight:700;src:url(/cf-fonts/v/comfortaa/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Comfortaa';font-style:normal;font-weight:700;src:url(/cf-fonts/v/comfortaa/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Comfortaa';font-style:normal;font-weight:700;src:url(/cf-fonts/v/comfortaa/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Comfortaa';font-style:normal;font-weight:700;src:url(/cf-fonts/v/comfortaa/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Orbitron';font-style:normal;font-weight:700;src:url(/cf-fonts/v/orbitron/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Baloo 2';font-style:normal;font-weight:800;src:url(/cf-fonts/v/baloo-2/5.2.7/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Baloo 2';font-style:normal;font-weight:800;src:url(/cf-fonts/v/baloo-2/5.2.7/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Baloo 2';font-style:normal;font-weight:800;src:url(/cf-fonts/v/baloo-2/5.2.7/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Baloo 2';font-style:normal;font-weight:800;src:url(/cf-fonts/v/baloo-2/5.2.7/devanagari/wght/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09;font-display:swap;}@font-face {font-family:'Fredoka';font-style:normal;font-weight:600;src:url(/cf-fonts/v/fredoka/5.2.10/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Fredoka';font-style:normal;font-weight:600;src:url(/cf-fonts/v/fredoka/5.2.10/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Fredoka';font-style:normal;font-weight:600;src:url(/cf-fonts/v/fredoka/5.2.10/hebrew/wght/normal.woff2);unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:'Audiowide';font-style:normal;font-weight:400;src:url(/cf-fonts/s/audiowide/5.2.7/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Audiowide';font-style:normal;font-weight:400;src:url(/cf-fonts/s/audiowide/5.2.7/latin-ext/400/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}</style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-fx" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="container">
+        <div class="ticker-wrapper">
+            <div class="ticker" data-i18n="ticker">wkrótce nowe wpisy na stronie: smukly network</div>
+        </div>
+        <div class="main">
+            <div class="menu">
+                <a href="index.html"><img src="stronaglowna_icon.png" alt=""><span class="nav-label nav-label-long" data-i18n="nav_home">STRONA GŁÓWNA</span></a>
+                <a href="o-mnie.html"><img src="omnie_icon.png" alt=""><span class="nav-label" data-i18n="nav_about">O MNIE</span></a>
+                <a href="sprzet.html" class="active"><img src="radai_icon.png" alt=""><span class="nav-label" data-i18n="nav_gear">RADAR</span></a>
+                <a href="muzyka.html"><img src="360_icon.ico" alt=""><span class="nav-label" data-i18n="nav_music">360</span></a>
+                <a href="studio-sul.html"><img src="romy_icon.png" alt=""><span class="nav-label" data-i18n="nav_studio">ROMY</span></a>
+                <a href="sztuka.html"><img src="(remont)_icon.png" alt=""><span class="nav-label nav-label-long" data-i18n="nav_art">(REMONT)</span></a>
+                <a href="blog.html"><img src="blog_icon.png" alt=""><span class="nav-label" data-i18n="nav_blog">BLOG</span></a>
+                <a href="kontakt.html"><img src="kontakt_icon.ico" alt=""><span class="nav-label" data-i18n="nav_contact">KONTAKT</span></a>
+                <a href="info.html" class="menu-info-bottom" data-i18n="nav_info">INFO</a>
+            </div>
+            <div class="content">
+                <div class="zkt">
+                    <h1 class="zkt-title">ŻYWA KULTURA TYGODNIA</h1>
+
+                    <p class="zkt-sub">W tym tygodniu mam do polecenia:</p>
+
+                    <div class="zkt-card">
+                        <div class="zkt-image">
+                            <img src="ZKTicon.png" alt="Żywa kultura tygodnia">
+                        </div>
+                        <div class="zkt-date" data-i18n="zkt_date">13.09.1907</div>
+                        <div class="zkt-name" data-i18n="zkt_name">Akademia Pana Kleksa - film</div>
+                        <p class="zkt-desc" data-i18n="zkt_desc">Akademia Pana Kleksa to wspaniały film, który zrobił mi i wielu osobom dzieciństwo. Polecam go z całego serca. Zarobisty film na podstawie książki, oczywiście ten starszy.</p>
+                    </div>
+                </div>
+            <div class="sidebar">
+                <div class="sidebar-top">
+
+                    <div class="lang-switch">
+                        <button type="button" id="btnPl" class="active" onclick="setLang('pl')" title="zmień na polski" aria-label="zmień na polski">
+                            <svg class="flag-hd-svg" viewBox="0 0 24 15">
+                                <rect x="0" y="0" width="24" height="7.5" fill="#ffffff"/>
+                                <rect x="0" y="7.5" width="24" height="7.5" fill="#dc143c"/>
+                            </svg>
+                        </button>
+
+                        <button type="button" id="btnEn" onclick="setLang('en')" title="change to English" aria-label="change to English">
+                            <svg class="flag-hd-svg" viewBox="0 0 24 15">
+                                <rect x="0" y="0" width="24" height="15" fill="#012169"/>
+                                <path d="M0 0 L24 15 M24 0 L0 15" stroke="#ffffff" stroke-width="3.2"/>
+                                <path d="M0 0 L24 15 M24 0 L0 15" stroke="#c8102e" stroke-width="1.6"/>
+                                <path d="M12 0 V15 M0 7.5 H24" stroke="#ffffff" stroke-width="5"/>
+                                <path d="M12 0 V15 M0 7.5 H24" stroke="#c8102e" stroke-width="2.8"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sidebar-gifs">
+                    <img src="https://88x31.nl/gifs/halflifethree.png" alt="HL3">
+                    <img src="https://88x31.nl/gifs/love-home.gif" alt="JP">
+                    <img src="https://88x31.nl/gifs/arcadevirus_av3.png" alt="Glam">
+                    <img src="https://anlucas.neocities.org/hash_now.gif" alt="Hash Now">
+                    <img src="https://anlucas.neocities.org/prod_625_17265.gif" alt="Free Speach">
+                    <img src="https://anlucas.neocities.org/Winamp.gif" alt="Winamp">
+                    <img src="https://anlucas.neocities.org/apple_fatal_error.gif" alt="Apple Fatal Error">
+                    <img src="https://anlucas.neocities.org/bestview.gif" alt="Open Eyes">
+                    <img src="https://anlucas.neocities.org/html.gif" alt="Learn html">
+                    <img src="https://anlucas.neocities.org/ribbon2.gif" alt="Strange World">
+                    <img src="https://anlucas.neocities.org/christnow.gif" alt="Christ">
+                    <img src="https://anlucas.neocities.org/email-icon.gif" alt="Any Questions">
+                    <div style="margin-top: 15px;">
+                        <img src="https://anlucas.neocities.org/worldwideweb_badge.gif" alt="World Wide Web Badge" style="border: none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer data-i18n="footer">
+            © 2026 SMUKLY NETWORK - NIE BŁĄDŹ W ŚWIECIE
+        </footer>
+    </div>
+
+    <script>
+        const i18n = {
+            pl: {
+                ticker: "wkrótce nowe wpisy na stronie: smukly network",
+                nav_home: "STRONA GŁÓWNA",
+                nav_about: "O MNIE",
+                nav_gear: "RADAR",
+                nav_music: "360",
+                nav_studio: "ROMY",
+                nav_art: "(REMONT)",
+                nav_blog: "BLOG",
+                nav_contact: "KONTAKT",
+                nav_info: "INFO",
+                top_line: "smukly network",
+                bottom_line: "sieć bez granic",
+                p1: "yooo tu smukly",
+                p2: "Witaj na mojej stronie, a w sumie bardziej na portalu ( ͡~ ͜ʖ ͡°)",
+                p3: "Jest to jej nowe wydanie, gdzie będzie aktualizowana co tydzień (w niedzielę zazwyczaj), a nie jak poprzednia.",
+                p4: "Co tu znajdziecie?<br>- kontakt i informacje<br>- zajawki oraz kolekcje (jestem chyba jakimś przydasiem)<br>- i również projekty czy artystyczne kreacje",
+                p5: "Pozdro i dziena za odwiedziny!",
+                zkt_date: "13.09.1907",
+                zkt_name: "Akademia Pana Kleksa - film",
+                zkt_desc: "Akademia Pana Kleksa to wspaniały film, który zrobił mi i wielu osobom dzieciństwo. Polecam go z całego serca. Zarobisty film na podstawie książki, oczywiście ten starszy.",
+                footer: "© 2026 SMUKLY NETWORK - NIE BŁĄDŹ W ŚWIECIE"
+            },
+            en: {
+                ticker: "new posts coming soon on: smukly network",
+                nav_home: "HOME",
+                nav_about: "ABOUT ME",
+                nav_gear: "RADAR",
+                nav_music: "360",
+                nav_studio: "ROMS",
+                nav_art: "(RENOV.)",
+                nav_blog: "BLOG",
+                nav_contact: "CONTACT",
+                nav_info: "INFO",
+                top_line: "smukly network",
+                bottom_line: "network without limits",
+                p1: "yooo it's smukly",
+                p2: "Welcome to my site, or rather to my portal ( ͡~ ͜ʖ ͡°)",
+                p3: "This is its new edition, where it will be updated every week (usually on Sunday), unlike the previous one.",
+                p4: "What will you find here?<br>- contact and information<br>- sneak peeks and collections (I'm probably some kind of hoarder)<br>- and also projects and artistic creations",
+                p5: "Peace and thanks for stopping by!",
+                zkt_date: "13.09.1907",
+                zkt_name: "Akademia Pana Kleksa - film",
+                zkt_desc: "A wonderful film that gave me and many others a childhood. I recommend it with all my heart. A great film based on the book - the older one, of course.",
+                footer: "© 2026 SMUKLY NETWORK - DON'T LOSE YOUR WAY"
+            }
+        };
+
+        function setLang(lang) {
+            localStorage.setItem("sn_lang", lang);
+            document.querySelectorAll("[data-i18n]").forEach((el) => {
+                const key = el.getAttribute("data-i18n");
+                if (i18n[lang] && i18n[lang][key]) {
+                    el.innerHTML = i18n[lang][key];
+                }
+            });
+            document.getElementById("btnPl").classList.toggle("active", lang === "pl");
+            document.getElementById("btnEn").classList.toggle("active", lang === "en");
+        }
+
+        setLang(localStorage.getItem("sn_lang") || "pl");
+        localStorage.removeItem("sn_theme");
+    </script>
+</body>
+</html>
