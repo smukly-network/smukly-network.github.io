@@ -1224,8 +1224,9 @@ body .menu .info-btn, body .menu .info-link { font-family: 'Comfortaa', 'Fredoka
 .x360-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
+    padding: 6px;
 }
 .x360-caption {
     margin: 8px 0 0;
