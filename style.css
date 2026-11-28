@@ -1236,8 +1236,7 @@ body .menu .info-btn, body .menu .info-link { font-family: 'Comfortaa', 'Fredoka
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(255, 255, 255, 0.3);
 }
 /* gdy brak pliku - pokazuje samą ramkę bez ikonki "zepsutego obrazka" */
-.x360-image img[src="main360icon.png"]:not([data-ok]),
-.x360-image img[src="mod360icon.png"]:not([data-ok]) { opacity: 0; }
+
 
 /* PRZYCISK + STRZAŁKA */
 .x360-open {
