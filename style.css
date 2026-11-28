@@ -1657,6 +1657,29 @@ body .content a:hover { color: #ffffff; }
 /* ============================================================
    ROMY - poprawiony uklad wpisow gier (dodane na koncu)
    ============================================================ */
+/* wieksze ramki na zdjecia + cale obrazki w srodku */
+.rg-box .rg-thumb {
+    flex: 0 0 132px;
+    width: 132px;
+    height: 132px;
+    aspect-ratio: auto;
+    background: rgba(20, 0, 3, 0.55);
+}
+.rg-box .rg-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
+}
+/* wiekszy naglowek strony */
+.romy-title {
+    font-size: 2.15rem;
+    letter-spacing: 7px;
+    margin-bottom: 1.1rem;
+}
+.romy-lead { font-size: 1rem; }
+.rg-title { font-size: 1.32rem; letter-spacing: 4px; }
+
 /* wpis: zdjecie po lewej na stale, tekst obok - bez naprzemiennosci */
 .rg-box .rg-item,
 .rg-box .rg-item:nth-child(even) {
@@ -1666,14 +1689,7 @@ body .content a:hover { color: #ffffff; }
     padding: 16px 0;
 }
 /* zdjecie mniejsze i kwadratowe, nie rozciaga wiersza */
-.rg-box .rg-thumb {
-    flex: 0 0 92px;
-    width: 92px;
-    height: 92px;
-    aspect-ratio: auto;
-    border-radius: 6px;
-}
-.rg-box .rg-thumb img { object-fit: cover; }
+
 
 /* tekst po prawej, ulozony rowno */
 .rg-box .rg-body { flex: 1 1 auto; }
